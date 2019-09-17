@@ -1,0 +1,4 @@
+pertama ganti dulu nama di controller jadi huruf kapital diawal
+kedua di model ganti juga jadi kapital
+
+baru rubah htt access harus sama yang di upload

@@ -1,0 +1,217 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Noto+Serif&display=swap);
+@import url("font-text/medium-font.css");
+@import url("font-text/medium-ori.css");
+@import url("font-text/roboto-dr.css");
+.container-header {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (max-width: 578px) {
+  .container-header {
+    padding: 0 10px !important;
+  }
+}
+
+@media (min-width: 578px) and (max-width: 768px) {
+  .container-header {
+    padding: 0 15px !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .container-header {
+    padding: 0 20px !important;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .container-header {
+    padding: 0 26px !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container-header {
+    max-width: 1280px;
+  }
+}
+
+.nav-atas-marine {
+  -webkit-font-smoothing: antialiased;
+  padding: 4px 0;
+  border-bottom: 1px solid #f3f3f3;
+  border-width: 0 0 1px 0;
+  background: #fff;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.nav-atas-marine ul {
+  margin: 0;
+}
+
+.nav-atas-marine li {
+  margin: 0 10px;
+}
+
+.nav-atas-marine ul li {
+  display: inline-block;
+}
+
+.nav-atas-marine a {
+  color: #606060;
+  opacity: 0.5;
+}
+
+.nav-atas-marine a:hover {
+  color: #1976d2;
+  opacity: 1;
+}
+
+.nav-marine {
+  padding: 10px 5px;
+  background: #fff;
+  -webkit-box-shadow: 0 2px 6px 0 rgba(49, 53, 59, 0.12) !important;
+          box-shadow: 0 2px 6px 0 rgba(49, 53, 59, 0.12) !important;
+  border: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+.nav-marine .row {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.nav-marine .row > [class^="col-"],
+.nav-marine .row > [class*=" col-"] {
+  padding-right: 3px;
+  padding-left: 3px;
+}
+
+.nav-marine a {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.nav-marine-log {
+  list-style: none;
+}
+
+.nav-marine-log ul {
+  margin: 0;
+  top: 5px;
+  position: relative;
+}
+
+.nav-marine-log ul li {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.nav-marine-log li {
+  margin-left: 5px;
+}
+
+.nav-marine-log a {
+  line-height: 16px;
+}
+
+.cari-marine-img img {
+  height: 42px;
+  width: 42px;
+}
+
+.cari-marine {
+  max-width: 100%;
+  position: relative;
+}
+
+.cari-marine i {
+  position: absolute;
+  top: -4px;
+  left: 2px;
+  opacity: 0.6;
+}
+
+.cari-marine .cari-btn {
+  position: absolute;
+  top: 1px;
+  font-weight: 600;
+  right: 0 !important;
+  padding: 8px 25px;
+  border: none;
+  color: #fff;
+  background: #1dbf73;
+  cursor: pointer;
+  -webkit-transition: color .2s,background-color .2s,box-shadow .2s,border .2s;
+  -webkit-transition: color .2s,background-color .2s,border .2s,-webkit-box-shadow .2s;
+  transition: color .2s,background-color .2s,border .2s,-webkit-box-shadow .2s;
+  transition: color .2s,background-color .2s,box-shadow .2s,border .2s;
+  transition: color .2s,background-color .2s,box-shadow .2s,border .2s,-webkit-box-shadow .2s;
+}
+
+.cari-marine .cari-btn:hover {
+  opacity: 0.9;
+}
+
+.input-cari-m {
+  min-width: 100%;
+  padding: 8px 35px;
+}
+
+.jlh-cart {
+  position: absolute;
+  right: 0;
+  top: -6px;
+  left: 18px;
+  background-color: #fa3e3e;
+  border-radius: 50%;
+  font-size: 10px;
+  padding: 0px 9px 2px 5px;
+  color: #fff;
+}
+
+.cart-view-2 {
+  position: relative;
+}
+
+.body-cv-2 {
+  position: absolute;
+  right: 0;
+  width: 320px;
+  background: #fff;
+  -webkit-box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  top: 46px;
+  display: none;
+}
+
+.title-cv-2 {
+  padding: 10px 10px;
+  border-bottom: 1px solid #c1c2c3;
+}
+
+.detail-cv-2 {
+  padding: 10px 10px;
+  max-height: 50vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.footer-cv-2 {
+  min-width: 100%;
+  padding: 10px 10px;
+  border-top: 1px solid #c1c2c3;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  font-weight: 600;
+  margin-top: 20px;
+  z-index: 3;
+  background: #fff;
+}
