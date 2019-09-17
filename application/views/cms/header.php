@@ -79,7 +79,7 @@
               </div>
             </div>
 
-            <div class="col-lg-6 col-md-6 col-sm-8 col-8">
+            <div class="col-lg-6 col-md-6 d-lg-inline-block d-md-inline-block d-sm-none d-none">
             <form action="<?php echo base_url().'search'?>" method="post" class="search-area " enctype="multipart/form-data">
               <div class="cari-marine">
                  <i class="fa fa-search"></i>
@@ -88,10 +88,26 @@
                 </form>
               </div>
             </div>
+              <div class="col-sm-2 col-4 d-md-none d-lg-none">
+                 <div class="float-left">   
+                     <a id="togle-barku" class="tx-20 togle-barku" style="margin-top:12px;"><i class="fa fa-bars"></i></a> 
+                  </div>
+              </div>
 
-            <div class="col-lg-4 col-md-4 col-sm-4 col-4">
+              <div class="col-sm-6 d-sm-inline-block d-none d-md-none d-lg-none">
+                 <div class="d-flex justify-content-center">   
+                            <a href="<?php echo base_url()?>" class="tx-18">
+                                Logo disni
+                              </a>
+                  </div>
+              </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-8">
                <div class="nav-marine-log float-right">
                     <ul>
+                      <li class="rt-shop-cart d-sm-inline-block d-inline-block d-md-none d-lg-none">
+                       <a id="tampil-search"><i class="fa fa-search" aria-hidden="true"></i></a> 
+                         
+                      </li>
                       <!-- start shop -->
                         <li class="rt-shop-cart hc-cart">
                         <?php if(count($this->cart->contents()) > 0){ ?>
@@ -213,10 +229,26 @@
 
       <!-- end row  -->
       </div>
+
+       
     <!-- end container header -->
     </div>
 </div>
 <!-- end searchnav -->
+      <!-- toogle search -->
+                   
+      <div class="body-search sticky-top">
+      <div class="container-header">     
+                <form action="<?php echo base_url().'search'?>" method="post" class="search-area " enctype="multipart/form-data">
+                    <div class="cari-marine">
+                      <i class="fa fa-search"></i>
+                      <input class="input-cari-m" type="text" placeholder="cari hasil nelayan" name="item">
+                      <input type="submit" name="submit" class="cari-btn" value="Cari"/>
+                      </form>
+                    </div>
+                </div> 
+                        </div>        
+      <!-- edn toggle search -->
 
     <!-- navbar -->
    

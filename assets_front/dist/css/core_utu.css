@@ -365,6 +365,16 @@ body {
   max-width: 100%;
 }
 
+.togle-barku {
+  border-radius: 50%;
+  width: 70px;
+  background: #f3f3f3;
+  padding: 4px 9px;
+  -webkit-box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
 .cart-view {
   height: 30px;
   margin-bottom: -20px;

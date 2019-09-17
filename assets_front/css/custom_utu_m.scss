@@ -62,7 +62,11 @@ border: none;
       padding-left: 3px;
     }
   }
-  a{color: rgba(0,0,0,.7);}
+  a{color: rgba(0,0,0,.7);} 
+
+  @media (max-width:768px){
+    padding: 20px 5px;
+ }
 }
 
 .nav-marine-log{
@@ -78,7 +82,10 @@ border: none;
     }
     li{margin-left:5px;}
     a{line-height: 16px;}
-    
+    @media (max-width:768px){
+       position: relative;
+       top:-8px;  
+    }
 }
 .cari-marine-img{
 
@@ -172,3 +179,21 @@ border: none;
     background: #fff;
 }
 // end cart custom 2
+
+
+
+// cari tampil
+.body-search{
+    min-width: 100%;
+    position: fixed; 
+    top:63px;
+    background: #fff;
+    padding: 8px 0;
+    box-shadow:$box-shadow-4dp;
+    display: none;
+@media(min-width:768px){
+    display:none!important;
+}
+}
+
+// end cari tampil
