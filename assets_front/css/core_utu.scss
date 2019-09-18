@@ -4,6 +4,7 @@
 @import url("font-text/medium-font.css");
 @import url("font-text/medium-ori.css");
 @import url("font-text/roboto-dr.css");
+@import url(https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
 
 body {
 	background: #f0edf0;
@@ -334,6 +335,12 @@ body {
 	padding:4px 9px;
 	box-shadow: $box-shadow-4dp;
 	cursor: pointer;
+}.togle-barku:after{
+	content:".";
+	font-size:10px;
+	color:transparent;
+	position: absolute;
+	right:0;
 }
 // cart seksi
 .cart-view {
@@ -582,7 +589,11 @@ body {
   color: black;
 }
 
-
+.slick-slider:hover{
+	.slick-prev,.slick-next{
+		display: block!important;
+	}
+}
 .slick-slide {
   transition: all ease-in-out .3s;
   opacity: .2;
@@ -749,3 +760,238 @@ overflow-y: hidden;
 }
 
 // end shopcarted
+.body-sidenav{
+	min-width: 100%;
+	position: fixed;
+	top:0;
+	margin: 0;
+	z-index:1051;
+	height: 100%;
+	height: calc(100% + 60px);
+	height: -moz-calc(100%);
+	padding-bottom: 60px;
+	display: none;
+	
+	
+
+	-ms-flex-flow: row wrap;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	flex-flow: row wrap;
+}
+.togle-sidenav{
+	color:red;
+	z-index:1051;
+	width: 250px;
+	padding:0;
+	position: fixed;
+	top:0;
+	margin: 0;
+
+	height: 100%;
+	height: calc(100% + 60px);
+	height: -moz-calc(100%);
+	padding-bottom: 60px;
+	background-color: #fff;
+	overflow-y: auto;
+	will-change: transform;
+	transition: 0.5s; 
+	-webkit-backface-visibility: hidden;
+			backface-visibility: hidden;
+	box-shadow: $box-shadow-8dp;
+	
+	ul{list-style:none;margin-left:-40px;margin-top:20px;}
+	ul li a{display: block;min-width: 100%;}
+	li{padding:10px 10px;}
+	li:before{
+		font-family: FontAwesome;
+		content: "\f054";
+		position: absolute;
+		font-size:16px;
+		right:10px;
+		display: block;
+		font-size: 12px;
+		margin-top: 5px;
+		color:rgba(0,0,0,.5);
+	}
+	li:hover{
+		background: #f3f3f3!important;
+		a{color:$laut-co}
+	}li:hover:before{color:$laut-co}
+	a{color:#272523;letter-spacing: 0.05em;font-weight: 700;}
+	
+}
+
+.ts-header{
+	padding:15px 10px;
+	font-family: $robosans;
+	font-size:16px;
+	border-bottom: 1px solid #c1c2c3; 
+	font-weight: 700;
+	cursor: pointer;
+}
+
+.rest-sidenav{
+	background-color: #000;
+	min-width: 100%;
+	height: 100%;
+	height: calc(100% + 60px);
+	height: -moz-calc(100%);
+	padding-bottom: 60px;
+	z-index: 1025;
+	opacity: 0.4;
+	-ms-flex: 1 0;
+	-webkit-box-flex: 1;
+	flex: 1 0;
+
+}.rest-sidenav:after{
+	content: ".";
+	background-color: #000;
+
+}
+
+// end sidenav togle
+
+
+// cart togle
+.body-cart-togle{
+	min-width: 100%;
+	position: fixed;
+	top:0;
+	margin: 0;
+	z-index:1051;
+	height: 100%;
+	height: calc(100% + 60px);
+	height: -moz-calc(100%);
+	padding-bottom: 60px;
+	display: none;
+	// display:flex;
+	-ms-flex-flow: row wrap;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	flex-flow: row wrap;
+	@media(max-width:578px){
+		overflow-y: hidden;
+	}
+
+}
+
+.togle-cart{
+	color:red;
+	z-index:1051;
+	width: 350px;
+	padding:0;
+	position: fixed;
+	top:0;
+	margin: 0;
+	right: 0;
+	height: 100%;
+	height: calc(100% + 60px);
+	height: -moz-calc(100%);
+	
+	background-color: #fff;
+	// overflow-y: auto;
+	will-change: transform;
+	transition: 0.5s; 
+	-webkit-backface-visibility: hidden;
+			backface-visibility: hidden;
+	box-shadow: $box-shadow-8dp;
+
+	@media (max-width:408px){
+		min-width: 100%!important;
+		transition: 0.9s; 
+		padding-bottom: 0!important;
+	}
+	@media(max-width:578px){
+		overflow-y: hidden;
+	}
+}
+.ts-cart-title{
+	padding:12px 5px 15px 15px;
+	background: #ececec;
+	font-size:18px;
+	color: #000;
+	font-weight: 600;
+}
+
+.ts-cart-detail{
+	position: relative;
+
+	height: 68vh;
+	overflow-x: hidden;
+	overflow-y: auto;
+	@media(max-width:578px){
+	height: 60vh;
+
+	}
+}
+.ts-cart-footer{
+	position: relative;
+	bottom:-2px;
+	color:#000;
+	background: #ececec;
+	min-width: 100%;
+	height: 100%;
+}
+
+.close-tc{
+	border-radius: 50%;
+	box-shadow: $box-shadow-2dp;
+	padding: 1px 8px;
+	background: #fff;
+	cursor: pointer;	
+}.close-tc:hover{
+	opacity: 0.7;
+}
+.cart-close-pos{
+	@media(max-width:578px){right:8px!important}
+}
+.rest-cart{
+	background-color: #000;
+	min-width: 100%;
+	height: 100%;
+	height: calc(100% + 60px);
+	height: -moz-calc(100%);
+	padding-bottom: 60px;
+	z-index: 1025;
+	opacity: 0.4;
+	-ms-flex: 1 0;
+	-webkit-box-flex: 1;
+	flex: 1 0;
+
+
+}.rest-cart:after{
+	content: ".";
+	background-color: #000;
+
+}
+
+.btn-belanja{
+	padding: 15px 40px;
+	border: 1px solid #d1d2d3;
+	color: #000;
+	display: inline-block !important;
+	min-width: 100%;
+	margin-bottom: 10px;
+	margin-left: 5px;
+	margin-right: 5px;
+	font-weight: 600;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	text-decoration: underline transparent !important;
+	background: #fff;
+	box-shadow:$box-shadow-2dp;
+	border-radius:8px;
+}
+.bel-kosong{
+	background: #43a047;
+	color:#fff!important;
+}.bel-berisi{
+	background: $laut-co;
+	color:#fff!important;
+}
+// end cart togle

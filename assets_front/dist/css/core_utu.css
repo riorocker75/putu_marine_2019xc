@@ -3,6 +3,7 @@
 @import url("font-text/medium-font.css");
 @import url("font-text/medium-ori.css");
 @import url("font-text/roboto-dr.css");
+@import url(https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
 body {
   background: #f0edf0;
 }
@@ -375,6 +376,14 @@ body {
   cursor: pointer;
 }
 
+.togle-barku:after {
+  content: ".";
+  font-size: 10px;
+  color: transparent;
+  position: absolute;
+  right: 0;
+}
+
 .cart-view {
   height: 30px;
   margin-bottom: -20px;
@@ -645,6 +654,10 @@ body {
   color: black;
 }
 
+.slick-slider:hover .slick-prev, .slick-slider:hover .slick-next {
+  display: block !important;
+}
+
 .slick-slide {
   -webkit-transition: all ease-in-out .3s;
   transition: all ease-in-out .3s;
@@ -865,4 +878,279 @@ body {
 
 .shop-carted:hover i {
   color: #1976d2 !important;
+}
+
+.body-sidenav {
+  min-width: 100%;
+  position: fixed;
+  top: 0;
+  margin: 0;
+  z-index: 1051;
+  height: 100%;
+  height: calc(100% + 60px);
+  height: -moz-calc(100%);
+  padding-bottom: 60px;
+  display: none;
+  -ms-flex-flow: row wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  flex-flow: row wrap;
+}
+
+.togle-sidenav {
+  color: red;
+  z-index: 1051;
+  width: 250px;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  margin: 0;
+  height: 100%;
+  height: calc(100% + 60px);
+  height: -moz-calc(100%);
+  padding-bottom: 60px;
+  background-color: #fff;
+  overflow-y: auto;
+  will-change: transform;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
+}
+
+.togle-sidenav ul {
+  list-style: none;
+  margin-left: -40px;
+  margin-top: 20px;
+}
+
+.togle-sidenav ul li a {
+  display: block;
+  min-width: 100%;
+}
+
+.togle-sidenav li {
+  padding: 10px 10px;
+}
+
+.togle-sidenav li:before {
+  font-family: FontAwesome;
+  content: "\f054";
+  position: absolute;
+  font-size: 16px;
+  right: 10px;
+  display: block;
+  font-size: 12px;
+  margin-top: 5px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.togle-sidenav li:hover {
+  background: #f3f3f3 !important;
+}
+
+.togle-sidenav li:hover a {
+  color: #2979ff;
+}
+
+.togle-sidenav li:hover:before {
+  color: #2979ff;
+}
+
+.togle-sidenav a {
+  color: #272523;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+}
+
+.ts-header {
+  padding: 15px 10px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  border-bottom: 1px solid #c1c2c3;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.rest-sidenav {
+  background-color: #000;
+  min-width: 100%;
+  height: 100%;
+  height: calc(100% + 60px);
+  height: -moz-calc(100%);
+  padding-bottom: 60px;
+  z-index: 1025;
+  opacity: 0.4;
+  -ms-flex: 1 0;
+  -webkit-box-flex: 1;
+  flex: 1 0;
+}
+
+.rest-sidenav:after {
+  content: ".";
+  background-color: #000;
+}
+
+.body-cart-togle {
+  min-width: 100%;
+  position: fixed;
+  top: 0;
+  margin: 0;
+  z-index: 1051;
+  height: 100%;
+  height: calc(100% + 60px);
+  height: -moz-calc(100%);
+  padding-bottom: 60px;
+  display: none;
+  -ms-flex-flow: row wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  flex-flow: row wrap;
+}
+
+@media (max-width: 578px) {
+  .body-cart-togle {
+    overflow-y: hidden;
+  }
+}
+
+.togle-cart {
+  color: red;
+  z-index: 1051;
+  width: 350px;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  margin: 0;
+  right: 0;
+  height: 100%;
+  height: calc(100% + 60px);
+  height: -moz-calc(100%);
+  background-color: #fff;
+  will-change: transform;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 408px) {
+  .togle-cart {
+    min-width: 100% !important;
+    -webkit-transition: 0.9s;
+    transition: 0.9s;
+    padding-bottom: 0 !important;
+  }
+}
+
+@media (max-width: 578px) {
+  .togle-cart {
+    overflow-y: hidden;
+  }
+}
+
+.ts-cart-title {
+  padding: 12px 5px 15px 15px;
+  background: #ececec;
+  font-size: 18px;
+  color: #000;
+  font-weight: 600;
+}
+
+.ts-cart-detail {
+  position: relative;
+  height: 68vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+@media (max-width: 578px) {
+  .ts-cart-detail {
+    height: 60vh;
+  }
+}
+
+.ts-cart-footer {
+  position: relative;
+  bottom: -2px;
+  color: #000;
+  background: #ececec;
+  min-width: 100%;
+  height: 100%;
+}
+
+.close-tc {
+  border-radius: 50%;
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  padding: 1px 8px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.close-tc:hover {
+  opacity: 0.7;
+}
+
+@media (max-width: 578px) {
+  .cart-close-pos {
+    right: 8px !important;
+  }
+}
+
+.rest-cart {
+  background-color: #000;
+  min-width: 100%;
+  height: 100%;
+  height: calc(100% + 60px);
+  height: -moz-calc(100%);
+  padding-bottom: 60px;
+  z-index: 1025;
+  opacity: 0.4;
+  -ms-flex: 1 0;
+  -webkit-box-flex: 1;
+  flex: 1 0;
+}
+
+.rest-cart:after {
+  content: ".";
+  background-color: #000;
+}
+
+.btn-belanja {
+  padding: 15px 40px;
+  border: 1px solid #d1d2d3;
+  color: #000;
+  display: inline-block !important;
+  min-width: 100%;
+  margin-bottom: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  font-weight: 600;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-text-decoration: underline transparent !important;
+          text-decoration: underline transparent !important;
+  background: #fff;
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+.bel-kosong {
+  background: #43a047;
+  color: #fff !important;
+}
+
+.bel-berisi {
+  background: #2979ff;
+  color: #fff !important;
 }

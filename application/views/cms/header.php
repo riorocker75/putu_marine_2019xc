@@ -41,12 +41,38 @@
 <div class="nav-atas-marine d-lg-block d-md-block d-sm-none d-none">
     <div class="container-header">
       <div class="row">
-        <div class="col-12">
+      <div class="col-4">
+          <div class="float-left">
+              <ul style="position:absolute;display:inline-block!important;left:0;">
+              <li >
+                  <a href="">Ikuti Kami </a>
+                    <ul style="position:relative;left:20px;top:-20px;margin:0!important;opacity:0.7">
+                    <li >
+                    <a href=""><i class="fab fa-facebook blue-text text-darken-3"></i></a>  
+                    </li>
+                    <li style="margin-left:-8px;">
+                    <a href=""><i class="fab fa-line green-text text-accent-4"></i></a>  
+                    </li>
+                    <li style="margin-left:-8px;">
+                    <a href=""><i class="fab fa-whatsapp green-text text-darken-2"></i></a>  
+                    </li>
+                    <li style="margin-left:-8px;">
+                    <a href=""><i class="fab fa-telegram blue-text text-accent-4"></i></a>  
+                    </li>
+
+                  </ul>
+              </li>
+               
+              </ul>
+
+              </div>
+          </div>
+        <div class="col-8">
           
           <div class="float-right">
               <ul>
               <li>
-                <a href="">Mulai Berjual</a>
+                <a href="<?php echo base_url().'petani/daftar_petani'?>">Mulai Berjualan</a>
                 </li>
                 <li>
                 <a href="">Tentang</a>
@@ -65,6 +91,9 @@
 
               </div>
           </div>
+
+         
+
           </div>
     </div>
 </div>
@@ -116,85 +145,17 @@
                              <a class="shop-carted" id="cv-lihat"><i class="fa fa-cart-arrow-down" style="color:rgba(0,0,0,.6);"></i> </a>
                              <span class="jlh-cart"><?php echo count($this->cart->contents()); ?></span>
 
-                             <div class="body-cv-2">
-                                  <div class="title-cv-2">
-                                      Belanja
-                                      <a class="float-right tx-12">( <?php echo count($this->cart->contents()); ?> )</a>
-                                  </div>
-
-                                  <div class="detail-cv-2">
-                                        <?php foreach($this->cart->contents() as $item){ ?>
-
-                                      <div class="ket-cb-img">
-                                        <!-- start gambar produk -->
-                                        <?php 
-                                              if($item['options']['gambar']!=""){
-                                                echo"<img src='".base_url().'dah_image/products/'.$item['options']['gambar']."' alt='product'>";
-                                              }else{
-                                                  echo "<img src='".base_url()."dah_image/default/no_product.jpg' alt='product'>";
-                                              }
-                                        ?>
-                                        <!-- akhir  dari gambar -->
-
-                                        <div class="ket-cb-nama">
-                                          <a href="<?php echo base_url().'produk/'.$item['id'].'-'.create_slug($item['name']) ?>" class="tx-12"><?php echo substr(strip_tags($item['name']),0,55) ?></a>
-                                          <p class="tx-12 blue-text text-accent-3 tx-bold-600">Rp. <?php echo number_format($item['price']).' ,-' ?> <span class="float-right tx-10">( <?php echo $item['qty'] ?> )</span></p>
-                                        </div>
-
-                                        <div class="ket-cart-close">
-                                          <a href="<?php echo base_url().'index/removefromnotifcart/'.$item['rowid']; ?>" class=" diki-tooltip" data-toggle="tooltip" data-placement="top" title="Hapus Belanja"> <i class="fa fa-times"></i></a>
-                                      </div>        
-                                      </div>
-                                    <?php } ?>
-                                  
-                                  <div class="ket-cart-total">
-                                    <p class="float-right">Total :&nbsp;&nbsp; 
-                                      <b class="blue-text text-accent-3"> <?php echo "Rp.". number_format($this->cart->total()).',-' ?></b>
-
-                                    </p>
-                                 </div>
-
-                                 <div class="col-12">
-                                        <a href="<?php echo base_url().'index/pembayaran' ?>" class="btn-beli-fullwidth" style="background:#00838f">Bayar Langsung</a>
-                                          
-                                 </div>
-                                 <br><br> 
-                                  </div>
-                                 
-
-                                  <div class="footer-cv-2">
-                                     
-                                      <a href="">Lihat Keranjang</a>
-                                  </div>
-                             </div>
-                            
-
+                             
 
                           </div>
                           <!-- end udah banyak -->
                         <?php }else{?>
+                          <li class="rt-shop-cart hc-cart">
+                          <!-- kalau cart udah banyak -->
                           <div class="cart-view-2">
                              <a class="shop-carted" id="cv-lihat"><i class="fa fa-cart-arrow-down" style="color:rgba(0,0,0,.6);"></i> </a>
-
-                             <div class="body-cv-2">
-                                  <div class="title-cv-2">
-                                     Opps jaring nya kosong
-                                  </div>
-                             
-                             
-                                  <div class="detail-cv-2 d-flex justify-content-center">
-                                      <img src="<?php echo base_url()?>dah_image/system/kosong-jaring.png" style="width:120px;height:120px">
-                                  </div>
-                                 <br>
-                                 <br>
-
-                                  <div class="footer-cv-2">
-                                     
-                                      <a href="" style="opacity:0.6">belanja dulu yuk</a>
-                                  </div>
-                             </div>
                             
-                          </div>
+                          </li>   
                         <?php } ?> 
                         </li>
 
@@ -235,20 +196,49 @@
     </div>
 </div>
 <!-- end searchnav -->
-      <!-- toogle search -->
-                   
-      <div class="body-search sticky-top">
-      <div class="container-header">     
-                <form action="<?php echo base_url().'search'?>" method="post" class="search-area " enctype="multipart/form-data">
-                    <div class="cari-marine">
-                      <i class="fa fa-search"></i>
-                      <input class="input-cari-m" type="text" placeholder="cari hasil nelayan" name="item">
-                      <input type="submit" name="submit" class="cari-btn" value="Cari"/>
-                      </form>
-                    </div>
-                </div> 
-                        </div>        
-      <!-- edn toggle search -->
+  <!-- toogle search -->
+                
+  <div class="body-search sticky-top">
+  <div class="container-header">     
+            <form action="<?php echo base_url().'search'?>" method="post" class="search-area " enctype="multipart/form-data">
+                <div class="cari-marine">
+                  <i class="fa fa-search"></i>
+                  <input class="input-cari-m" type="text" placeholder="cari hasil nelayan" name="item">
+                  <input type="submit" name="submit" class="cari-btn" value="Cari"/>
+                  </form>
+                </div>
+            </div> 
+                    </div>        
+  <!-- edn toggle search -->
+
+  <!-- toggle sidenav -->
+  <div class="body-sidenav" id="sideku-trigger">
+    <div class="togle-sidenav" >
+       <div class="ts-header blue-text text-accent-2" id="ts-back">
+        <i class="fa fa-arrow-left tx-14" style="margin-right:10px"></i> Kembali
+       </div>                   
+
+        <ul>
+             <li>
+               
+               <a href="">Link 1</a>
+             </li>    
+             
+             <li>
+               <a href="">Link 2</a>
+             </li>  
+
+             <li>
+               <a href="">Link 3</a>
+             </li>  
+
+        </ul>
+
+      </div>                      
+     <div class="rest-sidenav"></div>   
+      
+  </div>
+  <!-- end toogle sidenav -->
 
     <!-- navbar -->
    

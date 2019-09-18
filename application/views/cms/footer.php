@@ -1,3 +1,98 @@
+<!-- togle cart -->
+<div class="body-cart-togle" id="cart-togle-trigger">
+	 <div class="rest-cart"></div>   
+	 
+	<?php if(count($this->cart->contents()) > 0){ ?>
+    <div class="togle-cart" >
+         <div class="ts-cart-title">
+		 Belanjaan ( <?php echo count($this->cart->contents()); ?> )  <a class="float-right close-tc" id="close-tc"> <i class="fa fa-times tx-18 red-text text-accent-3" ></i></a>
+			 
+		 </div>                
+		 <br>
+			<div class="ts-cart-detail ">
+			<?php foreach($this->cart->contents() as $item){ ?>
+			
+			<div class="ket-cb-img">
+                                    <!-- start gambar produk -->
+                                    <?php 
+                                          if($item['options']['gambar']!=""){
+                                            echo"<img src='".base_url().'dah_image/products/'.$item['options']['gambar']."' alt='product'>";
+                                          }else{
+                                              echo "<img src='".base_url()."dah_image/default/no_product.jpg' alt='product'>";
+                                          }
+                                     ?>
+                                     <!-- akhir  dari gambar -->
+
+                                    <div class="ket-cb-nama">
+                                      <a href="<?php echo base_url().'produk/'.$item['id'].'-'.create_slug($item['name']) ?>" class="tx-12"><?php echo substr(strip_tags($item['name']),0,55) ?></a>
+                                      <p class="tx-12 blue-text text-accent-3 tx-bold-600">Rp. <?php echo number_format($item['price']).' ,-' ?></p>
+                                    </div>
+
+                                    <div class="ket-cart-close cart-close-pos">
+                                       <a href="<?php echo base_url().'index/removefromnotifcart/'.$item['rowid']; ?>" class=" diki-tooltip" data-toggle="tooltip" data-placement="top" title="Hapus Belanja"> <i class="fa fa-times"></i></a>
+                                   </div>        
+								  </div> 
+								 
+					 <?php } ?>	
+					</div>
+
+		
+
+		 <div class="ts-cart-footer">
+			<div style="padding: 10px 15px 0 10px;max-width:100%;">
+					<p class="tx-14 tx-bold-600">Jumlah <b class="float-right tx-bold-700">0</b></p>
+				<p class="tx-16 tx-bold-600">Total<b class="float-right tx-bold-700"><?php echo "Rp.". number_format($this->cart->total()).',-' ?></b></p>
+			</div>
+		
+
+	
+			<div class="col-12" style="padding:0 25px 0 15px;position:relative;">
+				<a href="<?php echo base_url().'shop'?>" class="btn-belanja bel-berisi" ><i class="fa fa-credit-card"></i> Langsung Bayar</a>
+
+			</div>
+		
+
+		</div>
+	</div>                      
+	<?php }else{?>	 
+	 <!-- belanja dulu -->
+	 <div class="togle-cart" >
+         <div class="ts-cart-title">
+			
+			 Opps Kosong  <a class="float-right close-tc" id="close-tc"> <i class="fa fa-times tx-18 red-text text-accent-3" ></i></a>
+		 </div>                
+		<div class="ts-cart-detail ">
+			<div  class="d-flex justify-content-center">
+			<img src="<?php echo base_url()?>dah_image/system/kosong-jaring.png" style="width:150px;height:150px;margin-top:100px;">
+
+			</div>
+			<br>
+			<p class="tx-14" style="text-align:center;color:#c1c2c3">Jaring ikan kamu masih kosong</p>
+		</div>	
+		<div class="ts-cart-footer">
+			<div style="padding: 10px 15px 0 10px;max-width:100%;">
+					<p class="tx-14 tx-bold-600">Jumlah <b class="float-right tx-bold-700">0</b></p>
+				<p class="tx-16 tx-bold-600">Total<b class="float-right tx-bold-700">Rp. 0</b></p>
+			</div>
+		
+
+		
+			<div class="col-12" style="padding:0 25px 0 15px;position:relative;">
+				<a href="<?php echo base_url().'shop'?>" class="btn-belanja bel-kosong" >Belanja Dulu</a>
+
+			</div>
+		
+
+		</div>
+	</div>   
+		
+	 <!-- end belanja dulu -->
+	<?php }?>	
+  </div>
+
+
+
+<!-- end togle cart -->
 
 <div class="modal-cart modal fade" tabindex="-1" role="dialog">
 	<div class="modal-dialog" role="document">
@@ -355,7 +450,7 @@
 	// end chat
 
 	$( document ).ready(function() {
-		var day = 1000*15*60;
+		var day = 1000*60*60*24;
 		var expires = new Date((new Date()).valueOf() + day);
 		if ($.cookie("sehari_close") == null) {
 

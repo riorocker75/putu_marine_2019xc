@@ -4,6 +4,7 @@
 @import url("font-text/medium-font.css");
 @import url("font-text/medium-ori.css");
 @import url("font-text/roboto-dr.css");
+@import url(https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
 
 
 // header
@@ -103,7 +104,7 @@ border: none;
         padding:8px 25px;
         border:none;
         color:#fff;
-        background:#1dbf73;
+        background:#2979ff;
         cursor: pointer;
         -webkit-transition: color .2s,background-color .2s,box-shadow .2s,border .2s;
         transition: color .2s,background-color .2s,box-shadow .2s,border .2s;
