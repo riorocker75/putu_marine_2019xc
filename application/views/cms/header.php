@@ -43,10 +43,10 @@
       <div class="row">
       <div class="col-4">
           <div class="float-left">
-              <ul style="position:absolute;display:inline-block!important;left:0;">
+              <ul style="position:absolute;display:inline-block!important;left:0;opacity:1!important">
               <li >
                   <a href="">Ikuti Kami </a>
-                    <ul style="position:relative;left:20px;top:-20px;margin:0!important;opacity:0.7">
+                    <ul style="position:relative;left:20px;top:-20px;margin:0!important;">
                     <li >
                     <a href=""><i class="fab fa-facebook blue-text text-darken-3"></i></a>  
                     </li>
@@ -117,7 +117,7 @@
                 </form>
               </div>
             </div>
-              <div class="col-sm-2 col-4 d-md-none d-lg-none">
+              <div class="col-sm-2 col-3 d-md-none d-lg-none">
                  <div class="float-left">   
                      <a id="togle-barku" class="tx-20 togle-barku" style="margin-top:12px;"><i class="fa fa-bars"></i></a> 
                   </div>
@@ -130,7 +130,7 @@
                               </a>
                   </div>
               </div>
-            <div class="col-lg-4 col-md-4 col-sm-4 col-8">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-9">
                <div class="nav-marine-log float-right">
                     <ul>
                       <li class="rt-shop-cart d-sm-inline-block d-inline-block d-md-none d-lg-none">
@@ -143,7 +143,7 @@
                           <!-- kalau cart udah banyak -->
                           <div class="cart-view-2">
                              <a class="shop-carted" id="cv-lihat"><i class="fa fa-cart-arrow-down" style="color:rgba(0,0,0,.6);"></i> </a>
-                             <span class="jlh-cart"><?php echo count($this->cart->contents()); ?></span>
+                             <span class="jlh-cart"><?php echo $this->cart->total_items() ?></span>
 
                              
 
@@ -208,7 +208,7 @@
                   </form>
                 </div>
             </div> 
-                    </div>        
+    </div>        
   <!-- edn toggle search -->
 
   <!-- toggle sidenav -->
@@ -219,18 +219,18 @@
        </div>                   
 
         <ul>
+        <?php
+        $kategori_aja=$this->db->query("select * from dah_product_category where pcat_sub='0' order by pcat_name asc")->result();
+        foreach($kategori_aja as $k){ 
+          
+          ?>
              <li>
                
-               <a href="">Link 1</a>
+             <a href="<?php echo base_url().'index/kategori_produk/'.$k->pcat_id;?>"><?php echo $k->pcat_name?></a>
              </li>    
              
-             <li>
-               <a href="">Link 2</a>
-             </li>  
-
-             <li>
-               <a href="">Link 3</a>
-             </li>  
+           
+             <?php } ?> 
 
         </ul>
 

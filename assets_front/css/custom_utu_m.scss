@@ -4,7 +4,8 @@
 @import url("font-text/medium-font.css");
 @import url("font-text/medium-ori.css");
 @import url("font-text/roboto-dr.css");
-@import url(https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+@import url("font-aw/css/all.css");
+
 
 
 // header
@@ -31,6 +32,30 @@
         max-width: 1280px;
     }
 }
+
+.container-contents{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    @media (max-width:578px){
+        padding:0 5px!important;
+    }
+
+    @media (min-width:578px) and (max-width:768px){
+        padding:0 15px!important;
+    }
+    @media (min-width:768px) and (max-width:992px){
+        padding:0 20px!important;
+    }
+    @media (min-width:992px) and (max-width:1200px){
+        padding:0 26px!important;
+    }
+    @media (min-width:1200px){
+        max-width: 1188px;
+    }
+}
 .nav-atas-marine{
     -webkit-font-smoothing: antialiased;
     padding:4px 0;
@@ -42,14 +67,16 @@
     ul{margin:0;}
     li{margin:0 10px;}
     ul li{display:inline-block;}
-    a{color:#606060;opacity:0.5}   
+    a{color:#606060;opacity:0.7}   
     a:hover{color:$primary-co;opacity:1}
 
 }
 
 .nav-marine{
 padding: 10px 5px;
-background:#fff;
+background-color:#fff;
+border: none;
+
 // box-shadow: $box-shadow-12dp;
 box-shadow: 0 2px 6px 0 rgba(49,53,59,.12)!important;
 border: none;
@@ -189,12 +216,130 @@ border: none;
     position: fixed; 
     top:63px;
     background: #fff;
+    
     padding: 8px 0;
     box-shadow:$box-shadow-4dp;
     display: none;
-@media(min-width:768px){
-    display:none!important;
-}
+    @media(min-width:768px){
+         display:none!important;
+    }
 }
 
-// end cari tampil
+// end cari tampil  
+
+
+.product-single-info{
+
+    .row{
+        margin-right: 0;
+        margin-left: 0;
+        & > [class^="col-"],
+        & > [class*=" col-"] {
+          padding-right: 5px;
+          padding-left: 5px;
+        }
+      }
+}
+.detail-ps-awal{
+    
+    
+    .row{
+        margin-right: 0;
+        margin-left: 0;
+        & > [class^="col-"],
+        & > [class*=" col-"] {
+          padding-right: 5px;
+          padding-left: 5px;
+        }
+      }
+
+}
+
+.detail-ps-img{
+ 
+  border: 1px solid #f3f3f3;  
+  margin-bottom: 15px;
+    img{
+        max-width: 100%;
+        height: 330px;
+        border-radius: 6px;
+    }
+
+    @media (max-width:992px){
+        max-width: 100%;
+        height: auto;
+        text-align: center;
+    }
+}
+.detail-ps-isi{
+
+    h2{font-size:24px;font-weight: 600;}
+    @media (min-width:992px){
+        margin-left: 15px;
+    }
+}
+.detail-psi-judul{
+    margin-bottom:10px;
+}
+.detail-psi-rating{
+    margin-bottom:5px;
+}
+.detail-psi-price{
+    margin-bottom: 10px;
+}
+.detail-psi-ikon{
+  
+    margin-top:20px;
+    i{opacity: 0.6;  margin-top:10px;}
+   
+}
+.dpsi-bagan{
+    display: -ms-flexbox;
+	display: -webkit-box;
+	display: flex;
+	-ms-flex-flow: row wrap;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+    flex-flow: row wrap;
+    margin-right: 25px;
+    p{font-size: 14px;}
+    border:1px solid #f3f3f3;
+    padding:10px 6px 0 6px;
+}
+.dpsi-bagan-ax{
+    
+    -ms-flex: 1 0;
+	-webkit-box-flex: 1;
+	flex: 1 0;
+	-webkit-align-self: flex-start;
+	-ms-flex-item-align: start;
+    align-self: flex-start;
+ 
+    margin-left:8px;
+}
+
+.info-product-detail{
+    padding:20px 5px;
+}
+
+.info-pd-title{
+    border-bottom: 4px solid $laut-co;
+    font-size: 20px;
+    font-weight: 600;
+    padding-bottom: 8px;
+}
+.info-pd-body{
+    margin-top:15px;
+
+}
+.sidebar-psi{
+    border:1px solid #c1c2c3;
+    border-radius:4px;
+    margin-bottom: 15px;
+}
+.sidebar-psi-title{
+    padding:10px 10px;
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom:5px;
+}

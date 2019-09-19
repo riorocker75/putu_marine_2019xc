@@ -7,7 +7,9 @@
 @import url(https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
 
 body {
-	background: #f0edf0;
+	// background: #f0edf0;
+	background: #fff;
+
 }
 
 ::-webkit-scrollbar {
@@ -144,6 +146,7 @@ body {
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
+	border-radius: 5px;
 	text-decoration: underline transparent !important;
 
 	@media (min-width: 250px) and (max-width: 600px) {
@@ -192,6 +195,61 @@ body {
 	color: #fff;
 }
 
+.bor-primary-md {
+	border: 2px #1976d2 solid;
+	color: #1976d2 !important;
+}
+.bor-primary-md:hover {
+	background: #1976d2;
+	color: #fff !important;
+	transition: .6s;
+	box-shadow: $box-shadow-4dp;
+}
+
+.bor-success-md {
+	border: 2px $success-co solid;
+	color: $success-co !important;
+}
+.bor-success-md:hover {
+	background: $success-co;
+	color: #fff !important;
+	transition: .6s;
+	box-shadow: $box-shadow-4dp;
+}
+
+.bor-warning-md {
+	border: 2px $warning-co solid;
+	color: $warning-co !important;
+}
+.bor-warning-md:hover {
+	background: $warning-co;
+	color: #fff !important;
+	transition: .6s;
+	box-shadow: $box-shadow-4dp;
+}
+
+.bor-danger-md {
+	border: 2px $danger-co solid;
+	color: $danger-co !important;
+}
+.bor-danger-md:hover {
+	background: $danger-co;
+	color: #fff !important;
+	transition: .6s;
+	box-shadow: $box-shadow-4dp;
+}
+
+.bor-laut-md {
+	border: 2px $laut-co solid;
+	color: $laut-co !important;
+}
+.bor-laut-md:hover {
+	background: $laut-co;
+	color: #fff !important;
+	transition: .6s;
+	box-shadow: $box-shadow-4dp;
+}
+
 .btn-u-md {
 	padding: 12px 40px;
 	border-radius: 3px;
@@ -229,13 +287,15 @@ body {
 	-ms-user-select: none;
 	text-decoration: underline transparent !important;
 	@media (min-width: 250px) and (max-width: 600px) {
-		padding: 2px 20px;
+		padding: 6px 20px;
 		font-size: 14px;
 	}
 	:hover {
 		border: 0 solid transparent !important;
 	}
 }
+
+
 
 .btn-login-fullwidth {
 	min-width: 100%;
@@ -538,14 +598,15 @@ body {
 	}
 	
 	a {
-		color: #000 ;
+		color: #fff ;
 		opacity: 0.7;
-		font-size: 12px;
+		font-size: 13px;
 		text-decoration: underline transparent;
 		font-weight: 500;
+		line-height: 16px;
 	}
 }.body-footer li:hover {
-	a {color: $primary-co;}
+	a {opacity: 0.9}
 }
 
 .copyright-footer {
@@ -800,7 +861,12 @@ overflow-y: hidden;
 			backface-visibility: hidden;
 	box-shadow: $box-shadow-8dp;
 	
-	ul{list-style:none;margin-left:-40px;margin-top:20px;}
+	ul{
+		list-style:none;
+		margin-left:-40px;
+		margin-top:20px;
+		overflow-y: auto;
+	}
 	ul li a{display: block;min-width: 100%;}
 	li{padding:10px 10px;}
 	li:before{
@@ -819,7 +885,7 @@ overflow-y: hidden;
 		a{color:$laut-co}
 	}li:hover:before{color:$laut-co}
 	a{color:#272523;letter-spacing: 0.05em;font-weight: 700;}
-	
+
 }
 
 .ts-header{
@@ -917,13 +983,15 @@ overflow-y: hidden;
 .ts-cart-detail{
 	position: relative;
 
-	height: 68vh;
+	height: 65vh;
 	overflow-x: hidden;
 	overflow-y: auto;
 	@media(max-width:578px){
 	height: 60vh;
 
 	}
+
+
 }
 .ts-cart-footer{
 	position: relative;
@@ -944,6 +1012,7 @@ overflow-y: hidden;
 	opacity: 0.7;
 }
 .cart-close-pos{
+	margin-top:5px;
 	@media(max-width:578px){right:8px!important}
 }
 .rest-cart{
@@ -994,4 +1063,49 @@ overflow-y: hidden;
 	background: $laut-co;
 	color:#fff!important;
 }
+
+
+.ts-cart-img{
+	display: -ms-flexbox;
+	display: -webkit-box;
+	display: flex;
+	-ms-flex-flow: row wrap;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	flex-flow: row wrap;
+	padding: 0 10px;
+
+	border-bottom:1px solid #e6e4e4;
+	padding-bottom:5px;
+	img{
+		height: 85px;width:75px;
+	}
+}
+.ts-cart-nama{
+    -ms-flex: 1 0;
+	-webkit-box-flex: 1;
+	flex: 1 0;
+	-webkit-align-self: flex-start;
+	-ms-flex-item-align: start;
+	align-self: flex-start;
+	padding: 0px 5px 5px 10px !important;
+	margin-bottom:10px;
+	line-height: 18px;
+	
+}
 // end cart togle
+
+.btn-round{
+	height: 28px;
+	width: 28px;
+	border-radius:50%;
+	border: 2px solid $laut-co;
+	i{position: absolute;top:9px;color: $laut-co;margin-left:-5px;}
+	cursor: pointer;
+}.btn-round:hover{
+	box-shadow: $box-shadow-2dp;
+}
+.input-group-prepend ,.input-group-append{
+	background: transparent!important;
+	cursor: pointer;
+}

@@ -21,10 +21,10 @@
     $.fn.InputSpinner = $.fn.inputSpinner = function (options) {
 
         var config = {
-            decrementButton: "<strong><i class='fas fa-minus tx-11'></i></strong>", // button text
-            incrementButton: "<strong><i class='fas fa-plus tx-11'></i></strong>", // ..
+            decrementButton: "<i class='fas fa-minus tx-11'></i>", // button text
+            incrementButton: "<i class='fas fa-plus tx-11'></i>", // ..
             groupClass: "", // css class of the resulting input-group
-            buttonsClass: "btn-outline-secondary",
+            buttonsClass: "btn-round",
             buttonsWidth: "2.5rem",
             textAlign: "center",
             autoDelay: 500, // ms holding before auto value change
@@ -39,11 +39,11 @@
 
         var html = '<div class="input-group ' + config.groupClass + '">' +
             '<div class="input-group-prepend">' +
-            '<button style="min-width: ' + config.buttonsWidth + '" class="btn btn-decrement ' + config.buttonsClass + '" type="button">' + config.decrementButton + '</button>' +
+            '<button class="btn-decrement ' + config.buttonsClass + '" type="button">' + config.decrementButton + '</button >' +
             '</div>' +
-            '<input type="text" style="text-align: ' + config.textAlign + '" class="form-control"/>' +
+            '<input type="text" style="margin:0 3px;text-align: ' + config.textAlign + '" class="input-sp"/>' +
             '<div class="input-group-append">' +
-            '<button style="min-width: ' + config.buttonsWidth + '" class="btn btn-increment ' + config.buttonsClass + '" type="button">' + config.incrementButton + '</button>' +
+            '<button  class="btn-increment ' + config.buttonsClass + '" type="button">' + config.incrementButton + '</button>' +
             '</div>' +
             '</div>'
 

@@ -264,11 +264,14 @@ a.prod-price{
 
 .breadcrumbs {
   height: auto;
-  padding: 20px 0px 5px 0px;
-  background: #fafafa;
-  box-shadow: $box-shadow-card;
+  padding: 25px 0px 5px 0px;
   opacity: 0.7;
- 
+  -webkit-font-smoothing: antialiased;
+  margin:0!important;
+
+  @media(max-width:578px){
+    padding-top:15px;
+  }
 }
 .breadcrumbs-container {
   padding: 0px 5px;
@@ -288,7 +291,8 @@ a.prod-price{
   line-height: 1;
   letter-spacing: 0.5px;
   text-decoration: none;
-  margin-left:-30px;
+  margin-left: -30px;
+  -webkit-font-smoothing: antialiased;
 }
 
 .breadcrumbs-line ul li {
@@ -298,15 +302,15 @@ a.prod-price{
 .breadcrumbs-line ul li:after {
   font-family: "Material Icons";
   content: "\e409";
-  // content: "/";
   top: 3px;
   position: relative;
   display: inline-block;
   color: #666666;
   line-height: 12px;
   font-size: 12px;
-  font-weight: 800;
+  font-weight: 600;
   -webkit-font-smoothing: antialiased;
+  margin:0 5px;
 }
 
 .breadcrumbs-line ul li a {
@@ -314,6 +318,7 @@ a.prod-price{
   color: #666666;
   text-decoration: underline transparent;
   font-weight: 600;
+  line-height: 16px;
 }
 .breadcrumbs-line ul li:last-child:after {
   display: none;
@@ -329,7 +334,8 @@ a.prod-price{
 
 // single prodct
 .product-single {
-  margin: 10px 0px;
+
+ 
 }
 .product-single-container {
   padding: 10px;
@@ -398,7 +404,7 @@ font-size: 16px;
 }
 
 .sticky-beli {
-  padding: 12px !important;
+  padding: 12px 0 !important;
   box-shadow: 0 -2px 6px 0 rgba(49, 53, 59, 0.16);
 
   background: #fff;
@@ -411,22 +417,23 @@ font-size: 16px;
   z-index: 1051;
 
   @media (max-width: 600px) {
-    padding:5px!important;
+    padding:8px!important;
   }
 }
 .harga-sticky-beli {
   position: relative;
   top: 10px;
-  margin: 0px 30px;
+ 
   p {
     line-height: 0;
     margin-bottom: 7px;
-    color: #d1d2d3;
+    opacity: 0.5;
     font-weight: 700;
   }
   span {
     font-weight: 600;
     font-family: $robosans;
+  
   }
 
   @media (max-width: 800px) {

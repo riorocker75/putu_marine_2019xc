@@ -12,7 +12,7 @@
 			<div class="ts-cart-detail ">
 			<?php foreach($this->cart->contents() as $item){ ?>
 			
-			<div class="ket-cb-img">
+			<div class="ts-cart-img">
                                     <!-- start gambar produk -->
                                     <?php 
                                           if($item['options']['gambar']!=""){
@@ -23,10 +23,19 @@
                                      ?>
                                      <!-- akhir  dari gambar -->
 
-                                    <div class="ket-cb-nama">
-                                      <a href="<?php echo base_url().'produk/'.$item['id'].'-'.create_slug($item['name']) ?>" class="tx-12"><?php echo substr(strip_tags($item['name']),0,55) ?></a>
-                                      <p class="tx-12 blue-text text-accent-3 tx-bold-600">Rp. <?php echo number_format($item['price']).' ,-' ?></p>
-                                    </div>
+                                    <div class="ts-cart-nama">
+                                      <a href="<?php echo base_url().'produk/'.$item['id'].'-'.create_slug($item['name']) ?>" class="tx-13 black-text"><?php echo substr(strip_tags($item['name']),0,35) ?></a>
+                                      <p class="tx-12 blue-text text-accent-3 tx-bold-600" style="margin-top:5px">Rp. <?php echo number_format($item['price']).' ,-' ?></p>
+										<p class="yellow-text text-darken-2 tx-10" style="margin-top:-15px"> 
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+
+										</p>
+										<p class="green-text text-darken-2 tx-12" style="margin-top:-15px;margin-bottom:-15px">Jumlah beli:&nbsp;<?php echo $item['qty'] ?></p>	  
+									</div>
 
                                     <div class="ket-cart-close cart-close-pos">
                                        <a href="<?php echo base_url().'index/removefromnotifcart/'.$item['rowid']; ?>" class=" diki-tooltip" data-toggle="tooltip" data-placement="top" title="Hapus Belanja"> <i class="fa fa-times"></i></a>
@@ -40,14 +49,14 @@
 
 		 <div class="ts-cart-footer">
 			<div style="padding: 10px 15px 0 10px;max-width:100%;">
-					<p class="tx-14 tx-bold-600">Jumlah <b class="float-right tx-bold-700">0</b></p>
+					<p class="tx-14 tx-bold-600">Jumlah <b class="float-right tx-bold-700"><?php echo $this->cart->total_items() ?></b></p>
 				<p class="tx-16 tx-bold-600">Total<b class="float-right tx-bold-700"><?php echo "Rp.". number_format($this->cart->total()).',-' ?></b></p>
 			</div>
 		
 
 	
 			<div class="col-12" style="padding:0 25px 0 15px;position:relative;">
-				<a href="<?php echo base_url().'shop'?>" class="btn-belanja bel-berisi" ><i class="fa fa-credit-card"></i> Langsung Bayar</a>
+				<a href="<?php echo base_url().'index/pembayaran' ?>" class="btn-belanja bel-berisi" ><i class="fa fa-credit-card"></i> Langsung Bayar</a>
 
 			</div>
 		
@@ -112,10 +121,10 @@
 </div><!-- /.modal -->
 
 <!-- footer start -->
-<footer class="footer-class">
+<footer class="footer-class blue darken-3 white-text">
   <div class="container">
 
-      <div class="row">
+      <div class="row" >
         <div class="col-lg-3 col-md-6 col-sm-12 col-12">
           <div class="tittle-footer">
               <h2>Tentang </h2>
@@ -134,24 +143,7 @@
 				 <a href=""><i class="fa fa-address-book" style="margin-right:8px;"></i>Lhokseumawe, Bukit Indah</a> 
 			  </li>
 
-			  <li>
-				  
-				<p class="tx-14 green-text text-darken-2" style="margin-bottom:4px;margin-top:10px;">Temukan Kami di</p>
-				<div class="social-sec">
-					<div class="social-btn">
-						<a href="" title="Facebook"><i class="fab fa-facebook blue-text text-darken-4"></i></a>	
-					</div>
-					<div class="social-btn">
-						<a href="" title="Line"><i class="fab fa-line green-text text-accent-4"></i></a>	
-					</div>
-					<div class="social-btn">
-						<a href="" title="Whatsapp"><i class="fab fa-whatsapp green-text text-darken-4"></i></a>	
-					</div>	
-					<div class="social-btn">
-						<a href="" title="Telegram"><i class="fab fa-telegram blue-text text-accent-4"></i></a>	
-					</div>	
-				</div>
-			  </li>
+			 
 			  <br>
 			  <li class="d-md-block d-lg-none d-sm-block d-block">
 			  <div id="lokasi" style="max-width:100%; height:150px"></div>
@@ -226,7 +218,7 @@
      
   </div>
 
-  <div class="copyright-footer">
+  <div class="copyright-footer blue darken-4 tx-14" style="margin-bottom:5px!important;">
     <div class="d-flex justify-content-center">
       &copy;2019 Dibuat Oleh : <a href="" class="pink-text text-lighten-2">&nbsp;U.Core</a>&nbsp;with <i class="fa fa-heartbeat pink-text" style="margin-top:6px;margin-left:5px;"></i>
 
@@ -657,7 +649,7 @@
             $(".input-spinner").inputSpinner()
     </script>  
 	
-	<script>
+	<!-- <script>
       function initMap() {
 	  var map;
 	  var lok={lat: 5.2030553, lng: 97.0612123};
@@ -673,9 +665,9 @@
         });
 	
       }
-    </script>	
+    </script>	 -->
 
- 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVbyFOcEs46t1t4srUIKVZIfZpSXsbiN8&callback=initMap" async defer></script>
+ 	<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVbyFOcEs46t1t4srUIKVZIfZpSXsbiN8&callback=initMap" async defer></script> -->
 
 	
 
