@@ -20,6 +20,11 @@
 	
 	?>
 <section class="product-gird">
+<?php  if($this->session->flashdata('sukses')){?>
+            <div class="notif notif-success">
+               <?php echo $this->session->flashdata('sukses') ?> 
+            </div>
+   <?php }?>
     <div class="container">
         <div class="row" >
             <!-- sidebar product-gird -->
@@ -81,7 +86,7 @@
 							</div>
 							
 							<div class="product-mg-stats center">
-										<i class="fas fa-award"></i>    Segar
+									<a id="<?php echo $p->prod_id; ?>" class="white-text tx-14 btn-addtocart"><i class="fa fa-cart-arrow-down"></i> Keranjang</a>	
 								</div>
                         </div>
 

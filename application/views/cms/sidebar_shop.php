@@ -1,4 +1,4 @@
-<div class="col-lg-3 col-md-5 col-sm-12 col-12">
+<div class="col-xl-2 col-lg-3 col-md-5 col-sm-12 col-12">
                 <div class="product-sidebar-form">
                     <div class="product-sf-title">
                        <h2>Kategori</h2> 

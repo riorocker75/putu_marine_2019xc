@@ -50,3 +50,10 @@ $(document).ready(function () {
 		
 	});
 });
+
+// notif
+$(document).ready(function(){
+	$(".notif").fadeIn();
+	$(".notif").delay( 3000 ).fadeOut(2000);
+});
+// end notif

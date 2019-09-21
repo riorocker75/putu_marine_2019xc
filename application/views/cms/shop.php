@@ -1,6 +1,6 @@
 <!-- breadrumb section -->
 <section class="breadcrumbs">
-    <div class="container">
+    <div class="container-contents">
         <div class="breadcrumbs-line">
             <ul>
                 <li><a href="<?php echo base_url()?>">Home</a> </li>
@@ -19,14 +19,19 @@
 	
 	?>
 <section class="product-gird">
-    <div class="container">
+<?php  if($this->session->flashdata('sukses')){?>
+            <div class="notif notif-success">
+               <?php echo $this->session->flashdata('sukses') ?> 
+            </div>
+   <?php }?>
+    <div class="container-contents">
         <div class="row" >
             <!-- sidebar product-gird -->
             <?php include "sidebar_shop.php"?>
             <!-- end sidebar -->
 
 			<!-- product-main-gird -->
-            <div class="col-lg-9 col-md-7 col-sm-12 col-12">
+            <div class="col-xl-10 col-lg-9 col-md-7 col-sm-12 col-12">
 				<div class="row">
 					<?php foreach($products as $p){?>
                     <div class="col-lg-3 col-md-6 col-sm-6 col-6">
@@ -52,9 +57,7 @@
                             </div>
 
                             <div class="product-mg-sell">
-								<div class="product-mg-price">
-									<p>Rp.<?php echo number_format($p->prod_price)?></p>
-								</div>
+								
 
 								<div class="product-mg-rating">
 									<p>
@@ -68,19 +71,13 @@
 									
 								</div>
 
-								<div class="product-mg-author">
-									<p>
-										<i class="fas fa-store-alt"></i> 
-										<?php
-										  $nama_author=$this->m_dah->product_author_detail($p->prod_author)->row();
-										  echo $nama_author->user_name; 
-										?>	
-									</p>
+                                <div class="product-mg-price">
+									<p>Rp.<?php echo number_format($p->prod_price)?></p>
 								</div>
 							</div>
 							
 							<div class="product-mg-stats center">
-										<i class="fas fa-award"></i>    Segar
+									<a id="<?php echo $p->prod_id; ?>" class="white-text tx-14 btn-addtocart"><i class="fa fa-cart-arrow-down"></i> Keranjang</a>	
 								</div>
                         </div>
 

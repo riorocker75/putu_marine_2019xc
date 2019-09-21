@@ -41,23 +41,23 @@
 <div class="nav-atas-marine d-lg-block d-md-block d-sm-none d-none">
     <div class="container-header">
       <div class="row">
-      <div class="col-4">
+      <div class="col-4 col-lg-4 col-xl-4 d-md-none d-lg-inline-block d-xl-inline-block">
           <div class="float-left">
               <ul style="position:absolute;display:inline-block!important;left:0;opacity:1!important">
               <li >
                   <a href="">Ikuti Kami </a>
                     <ul style="position:relative;left:20px;top:-20px;margin:0!important;">
                     <li >
-                    <a href=""><i class="fab fa-facebook blue-text text-darken-3"></i></a>  
+                    <a href=""><i class="fab fa-facebook white-text"></i></a>  
                     </li>
                     <li style="margin-left:-8px;">
-                    <a href=""><i class="fab fa-line green-text text-accent-4"></i></a>  
+                    <a href=""><i class="fab fa-line white-text"></i></a>  
                     </li>
                     <li style="margin-left:-8px;">
-                    <a href=""><i class="fab fa-whatsapp green-text text-darken-2"></i></a>  
+                    <a href=""><i class="fab fa-whatsapp white-text "></i></a>  
                     </li>
                     <li style="margin-left:-8px;">
-                    <a href=""><i class="fab fa-telegram blue-text text-accent-4"></i></a>  
+                    <a href=""><i class="fab fa-telegram white-text"></i></a>  
                     </li>
 
                   </ul>
@@ -67,7 +67,7 @@
 
               </div>
           </div>
-        <div class="col-8">
+        <div class="col-8 col-lg-8 col-xl-8 col-md-12">
           
           <div class="float-right">
               <ul>
@@ -108,7 +108,7 @@
               </div>
             </div>
 
-            <div class="col-lg-6 col-md-6 d-lg-inline-block d-md-inline-block d-sm-none d-none">
+            <div class="col-xl-6 col-lg-5 col-md-6 d-xl-inline-block d-lg-inline-block d-md-inline-block d-sm-none d-none">
             <form action="<?php echo base_url().'search'?>" method="post" class="search-area " enctype="multipart/form-data">
               <div class="cari-marine">
                  <i class="fa fa-search"></i>
@@ -130,11 +130,11 @@
                               </a>
                   </div>
               </div>
-            <div class="col-lg-4 col-md-4 col-sm-4 col-9">
+            <div class="col-xl-4 col-lg-5 col-md-4 col-sm-4 col-9">
                <div class="nav-marine-log float-right">
                     <ul>
                       <li class="rt-shop-cart d-sm-inline-block d-inline-block d-md-none d-lg-none">
-                       <a id="tampil-search"><i class="fa fa-search" aria-hidden="true"></i></a> 
+                       <a id="tampil-search"><i class="fa fa-search white-text" aria-hidden="true"></i></a> 
                          
                       </li>
                       <!-- start shop -->
@@ -142,7 +142,7 @@
                         <?php if(count($this->cart->contents()) > 0){ ?>
                           <!-- kalau cart udah banyak -->
                           <div class="cart-view-2">
-                             <a class="shop-carted" id="cv-lihat"><i class="fa fa-cart-arrow-down" style="color:rgba(0,0,0,.6);"></i> </a>
+                             <a class="shop-carted" id="cv-lihat"><i class="fa fa-cart-arrow-down white-text" style="color:rgba(0,0,0,.6);"></i> </a>
                              <span class="jlh-cart"><?php echo $this->cart->total_items() ?></span>
 
                              
@@ -153,7 +153,7 @@
                           <li class="rt-shop-cart hc-cart">
                           <!-- kalau cart udah banyak -->
                           <div class="cart-view-2">
-                             <a class="shop-carted" id="cv-lihat"><i class="fa fa-cart-arrow-down" style="color:rgba(0,0,0,.6);"></i> </a>
+                             <a class="shop-carted" id="cv-lihat"><i class="fa fa-cart-arrow-down white-text"></i> </a>
                             
                           </li>   
                         <?php } ?> 
@@ -164,13 +164,13 @@
                         <?php if($this->session->userdata('user_status') != "login"){?>
                           <!-- tidak login -->
                         <li class="d-lg-inline-block d-md-none d-sm-none d-none">
-                          <a class="btn-bordered-sm tx-14" style="border:none" href="<?php echo base_url().'index/user_daftar'?>">Daftar </a>
-                          <a class="btn-bordered-sm tx-14" data-toggle="modal" data-target="#login-pembeli">Masuk </a>
+                          <a class="btn-bordered-sm tx-14" style="border:none;margin-right:-10px" href="<?php echo base_url().'index/user_daftar'?>">Daftar </a>
+                          <a class="btn-bordered-sm tx-14 white-text" data-toggle="modal" data-target="#login-pembeli">Masuk </a>
 
                         </li>
 
                         <li class="rt-shop-cart d-lg-none">
-                          <a data-toggle="modal" data-target="#login-pembeli" class="shop-carted"> <i class="fas fa-sign-in-alt"></i> </a>
+                          <a data-toggle="modal" data-target="#login-pembeli" class="shop-carted"> <i class="fas fa-sign-in-alt white-text"></i> </a>
                         </li>
                         <!-- end tidak login -->
                         <?php }else{?>

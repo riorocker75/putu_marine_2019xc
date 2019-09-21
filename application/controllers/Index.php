@@ -239,6 +239,8 @@ class Index extends CI_Controller {
 				);
 			$this->cart->product_name_rules = '[:print:]';
 			$this->cart->insert($data);
+			$this->session->set_flashdata('sukses', 'Ditambahkan ke keranjang');
+				
 		}
 	}
 

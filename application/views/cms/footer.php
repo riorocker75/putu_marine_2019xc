@@ -475,16 +475,9 @@
 							url: "<?php echo base_url(); ?>" + "index/addtocart",
 							data: data,
 							success: function(){
-								$('.modal-cart').modal();
+								location.reload();
 							},
-							beforeSend: function(){
-								$('#'+id).after("<span class='ajax-cart heading-text pull-right'><i class='icon-spinner2 spinner position-left'></i></span>");
-								$('#'+id).hide();
-							},
-							complete: function(){
-								$('.ajax-cart').hide();
-								$('#'+id).show();
-							},
+							
 							error: function() {
 								alert("Gagal menambahkan produk ke keranjang !");
 							}

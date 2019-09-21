@@ -1,62 +1,41 @@
-	<!-- Page content -->
-	<div class="page-content">
+<div class="container-contents">
+	<div class="daftar-v2">
+			<div class="row">
+				<div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2 col-sm-10 offset-sm-1 col-12 ">
+				<form action="<?php echo base_url().'index/user_daftar'; ?>" method="post">
+						<div class="body-dfv2">
+								<div class="title-dfv2">
+									<h2>Buat Akun </h2>	
+								</div>
+							
+								<div class="input-group-dfv2">
+								
+									<input class="input-dfv2" type="email" name="email"  aria-describedby="emailHelp" placeholder="Alamat Email">
+									<i class="fa fa-envelope" aria-hidden="true"></i>
+									<small class="form-text text-muted"><span class="text-danger"><?php echo form_error('email'); ?></span></small>
+								
+								</div>
 
-		<!-- Main content -->
-		<div class="content-wrapper">
+								<div class="input-group-dfv2">
+								
+									<input class="input-dfv2" type="text" name="nama" placeholder="Nama Lengkap">
+									<i class="fa fa-id-card" aria-hidden="true"></i>
+								
+								</div>
 
-			<!-- Advanced login -->
-			<form action="<?php echo base_url().'index/user_daftar'; ?>" method="post">
-				<div class="row">
-					<div class="col-lg-4 offset-lg-4 col-sm-8 offset-sm-2 col-10 offset-1">
-							<div class="main-login-form">
+								<div class="input-group-dfv2">
+								
+								<input class="input-dfv2" type="password" name="password" placeholder="Password">
+								<i class="fa fa-lock" aria-hidden="true"></i>
+							
+								</div>
 
-<div class="mlg-title">
-	<h2>Daftar Sekarang</h2>
-
-</div>
-		<div class="form-group">
-		<label for="exampleInputEmail1" style="opacity:0.6">Alamat Email</label>
-		<input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" >
-			<small class="form-text text-muted"><span class="text-danger"><?php echo form_error('email'); ?></span></small>
-		</div>
-
-		<div class="form-group">
-		<label for="namalengkap" style="opacity:0.6">Nama Lengkap</label>
-		<input type="text" id="namalengkap" class="form-control" name="nama" >
-		<small class="form-text text-muted"><span class="text-danger"><?php echo form_error('nama'); ?></span></small>
-
-		</div>
-
-		<div class="form-group">
-		<label for="buatpass" style="opacity:0.6">Buat Password</label>
-		<input type="password" class="form-control" id="buatpass" name="password">
-		<small class="form-text text-muted"><span class="text-danger"><?php echo form_error('password'); ?></span></small>
-
-		</div>
-
-		
-
-		<div  style="margin-top:30px;">
-			<button class="btn-login-fullwidth bor-daftar"> Daftar <i class="fas fa-sign-in-alt"></i></button>
-
-		</div>
-
-		<div class="col-lg-10 offset-lg-1 col-sm-12 col-12 tx-14" style="opacity:0.8;margin-top:10px;margin-bottom:-10px;text-align:center">
-			Dengan mendaftar, saya setuju dengan syarat  dan  kebijakan berlaku
-			
-		
-		</div>
-</div>
-
-						
-						
-					</div>
+								<button class="btn-bordered-md-fullwidth bor-primary-md">DAFTAR&nbsp;&nbsp;<i class="fa fa-paper-plane"></i></button>
+						</div>
+					</form>
 				</div>
-			</form>
-			<!-- /advanced login -->
-
-		</div>
-		<!-- /main content -->
-
+			</div>
+		<!-- end row -->
 	</div>
-		<!-- /page content -->
+	<!-- end daftarv2 -->
+</div>

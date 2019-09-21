@@ -234,7 +234,7 @@
 
                 <div class="col-lg-8 col-md-6 col-sm-4 col-12 ">
                     <div class="harga-sticky-beli float-lg-right float-sm-left d-none  d-sm-block d-md-block">
-                        <p>Total:</p>  
+                        <p class="tx-14">Total:</p>  
                     <span>Rp&nbsp;{{ (harga * stock) || (harga * 1) | number}},-</span>
                     </div>
 
@@ -242,8 +242,8 @@
                     <div class="sticky-ss">
                         <img src="<?php echo base_url()?>dah_image/system/toko.svg">                    
                                             
-                        <div class="sticky-ss-nt blue-text text-accent-4">
-                            <?php echo $nama_author->user_name; ?>  
+                        <div class="sticky-ss-nt" >
+                           <span style="opacity:0.6"><?php echo $nama_author->user_name; ?></span>   
                             <p class="yellow-text text-darken-3 tx-10" style="margin-top:5px;"> 
                             <i class="fa fa-star"></i> 
                             <i class="fa fa-star"></i> 
