@@ -1239,11 +1239,12 @@ font-size: 16px;
 
 // modal login
 .modal-login{
-  top: 30%;
+  top: 20%;
   left: 52%;
   -webkit-transform: translate(-50%, 2%);
           transform: translate(-50%, 2%);
   width: 350px;
+  border-radius: 8px;
 }
 
 .main-login-form{

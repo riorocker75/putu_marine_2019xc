@@ -1,8 +1,23 @@
 
+ 
   <!-- product index   -->
   <br>	
 <section class="product-st-2">
   <div class="container-contents">
+
+    <!-- slider start -->
+        <section class="variable slider" style="margin-bottom:40px;">
+      
+      <div class="img-slick-slider">
+        <img src="<?php echo base_url()?>dah_image/tester_img/tester2.png">
+      
+      </div>
+      <div class="img-slick-slider">
+        <img src="<?php echo base_url()?>dah_image/tester_img/tester3.png">
+      </div>
+    </section>
+
+    <!-- end silder  -->
       <!-- start produk   -->
       <div class="pst2-lrow">
       <?php	if(count($products) > 0){?>

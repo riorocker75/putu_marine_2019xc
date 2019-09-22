@@ -176,7 +176,7 @@
                         <?php }else{?>
                           <!-- start login -->
                           <li class="rt-shop-cart">
-                          <a class="shop-carted" style="position:relative;top:-2px;"><i class="fa fa-user" style="color:rgba(0,0,0,.6);"></i> </a>
+                          <a class="shop-carted" id="user-lihat"  style="position:relative;top:-2px;"><i class="fa fa-user white-text" style="color:rgba(0,0,0,.6);"></i> </a>
                         </li>
                           <!-- end login -->
                         <?php }?> 
@@ -240,6 +240,21 @@
   </div>
   <!-- end toogle sidenav -->
 
-    <!-- navbar -->
+  <!-- togle user -->
+    <div class="body-user-togle" id="user-togle-trigger">
+       <div class="rest-user"></div> 
+          <div class="togle-user">
+              <div class="detail-utg">
+                    <i class="fa fa-times tx-20 close-user-tg"></i>
+                    <div class="bg-dutg">
+                        <img src="<?php echo base_url()?>dah_image/user/bguser.jpg" alt="">
+                    </div>
+                    <div class="user-dutg-img">
+                        <img src="<?php echo base_url()?>dah_image/default/pembeli.jpg" alt="" srcset="">
+                    </div>
+              </div>
+          </div>   
+    </div>      
+  <!-- end togle user -->
+
    
-    <!-- end navbar -->

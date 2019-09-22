@@ -51,9 +51,30 @@ $(document).ready(function () {
 	});
 });
 
+// user togle
+$(document).ready(function () {
+	$("#user-lihat").click(function () { 
+		$('.togle-user').toggle("slide",{direction: "right"},300);
+		$('.body-user-togle').toggle("slide",{direction: "right"},500);
+		
+	});
+
+	$('.rest-user').click(function () { 
+		$('.togle-user').toggle("slide",{direction: "right"},500);
+		$('.body-user-togle').toggle("slide",{direction: "right"},700);
+	});
+
+	$('.close-user-tg').click(function () { 
+		$('.togle-user').toggle("slide",{direction: "right"},500);
+		$('.body-user-togle').toggle("slide",{direction: "right"},700);
+	});
+});
+// end user togle
+
 // notif
 $(document).ready(function(){
 	$(".notif").fadeIn();
 	$(".notif").delay( 3000 ).fadeOut(2000);
 });
 // end notif
+

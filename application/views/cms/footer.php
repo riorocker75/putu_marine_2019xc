@@ -234,46 +234,38 @@
 <div class="modal fade modal-login" id="login-pembeli" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Masuk Akun</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
+		<div class="login-v2-title">
+			<h2>Masuk</h2>
+			<i class="fa fa-times tx-20 close" data-dismiss="modal" aria-label="Close"></i>
+		</div>
       <form action="<?php echo base_url().'index/user_login' ?>" method="post">
-        <div class="modal-body">  
-        <div class="form-group">
-             
-              <input type="email" class="form-control tx-14" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
-              <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
-          </div>
-        <div class="form-group">
+        <div class="login-v2-body">  
       
-          <input type="password" class="form-control tx-14" name="password" id="exampleInputPassword1" placeholder="Password">
-        </div>
+				<div class="input-group-dfv2">
+					
+					<input class="input-dfv2" type="email" name="email"  aria-describedby="emailHelp" placeholder="Alamat Email">
+					<i class="fa fa-envelope" aria-hidden="true"></i>
+					<small class="form-text text-muted"><span class="text-danger"><?php echo form_error('email'); ?></span></small>
 
-             <div class="row">
-                <div class="col-6">
-                 <a href="" class=" float-left tx-13 red-text text-darken-4 tx-bold-600">Lupa Password ?</a> 
-                 
-                </div>
-                <div class="col-6 ">
-                   <a href="<?php echo base_url().'index/user_daftar';?>" class="float-right tx-13 blue-text text-darken-2 tx-bold-600">Daftar akun</a>
-                </div>
-
-             </div>
-
-             <div class="col-12" style="margin-top:10px;">
-               <button type="submit" class="btn-login-fullwidth bor-login"> Masuk <i class="fas fa-sign-in-alt"></i></button>
-
-			 </div>
-				 <div class="d-flex justify-content-center">
-
-				 <a data-toggle="modal" data-target="#login-penjual" id="log-jual" class="tx-12 labil labil-success white-text" style="text-transform:none;cursor:pointer">Masuk Ke Toko</a>
 				</div>
 
-        
-          </div>
+				<div class="input-group-dfv2">
+					
+					<input class="input-dfv2" type="password" name="password" placeholder="Password">
+					<i class="fa fa-lock" aria-hidden="true"></i>
+
+				</div>
+
+				<button class="btn-bordered-sm-fullwidth bor-primary-md" type="submit">Masuk&nbsp;&nbsp;<i class="fas fa-sign-in-alt"></i></button>
+				
+				<div class="login-v2-divi">
+					<div class="login-v2-line"></div>
+					<p>Masuk ke toko</p>
+				</div>
+
+				<a data-toggle="modal" data-target="#login-penjual" id="log-jual" class="btn-bordered-sm-fullwidth bor-danger-md"> Masuk Ke Toko&nbsp;&nbsp;<i class="fas fa-store    "></i> </a>
+				<p class="tx-13" style="margin-top:20px;text-align:center;margin-bottom:-15px">Belum punya akun? <a href="<?php echo base_url().'index/user_daftar';?>">yuk daftar</a> </p>
+			</div>
       </form>
      
     </div>
@@ -289,43 +281,33 @@
 <div class="modal fade modal-login" id="login-penjual" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Masuk ke Toko</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
+	<div class="login-v2-title">
+			<h2>Masuk</h2>
+			<i class="fa fa-times tx-20 close" data-dismiss="modal" aria-label="Close"></i>
+		</div>
       <form action="<?php echo base_url().'petani/login_act' ?>" method="post">
-        <div class="modal-body">  
-        <div class="form-group">
-             
-              <input type="text" class="form-control tx-14" name="uname"   placeholder="Username">
-              <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
-          </div>
-        <div class="form-group">
+	  <div class="login-v2-body">  
       
-          <input type="password" class="form-control tx-14" name="pass" placeholder="Password">
-        </div>
+	  <div class="input-group-dfv2">
+		  
+		  <input class="input-dfv2" type="text" name="uname" placeholder="Username">
+		  <i class="fa fa-user" aria-hidden="true"></i>
+		  <small class="form-text text-muted"><span class="text-danger"><?php echo form_error('uname'); ?></span></small>
 
-             <div class="row">
-                <div class="col-6">
-                 <a href="" class=" float-left tx-13 red-text text-darken-4 tx-bold-600">Lupa Password ?</a> 
-                 
-                </div>
-                <div class="col-6 ">
-                   <a href="<?php echo base_url().'petani/daftar_petani';?>" class="float-right tx-13 blue-text text-darken-2 tx-bold-600">Daftar menjadi penjual</a>
-                </div>
+	  </div>
 
-             </div>
+	  <div class="input-group-dfv2">
+		  
+		  <input class="input-dfv2" type="password" name="pass" placeholder="Password">
+		  <i class="fa fa-lock" aria-hidden="true"></i>
 
-             <div class="col-12" style="margin-top:10px;">
-               <button type="submit" class="btn-login-fullwidth bor-login"> Masuk <i class="fas fa-sign-in-alt"></i></button>
+	  </div>
 
-			 </div>
-				
-
-        
-          </div>
+	  <button class="btn-bordered-sm-fullwidth bor-primary-md" type="submit">Masuk Toko&nbsp;&nbsp;<i class="fas fa-sign-in-alt"></i></button>
+	  
+	
+	  <p class="tx-13" style="margin-top:20px;text-align:center;margin-bottom:-15px">Belum punya toko? <a href="<?php echo base_url().'petani/daftar_petani';?>">yuk daftar</a> </p>
+  </div>
       </form>
      
     </div>

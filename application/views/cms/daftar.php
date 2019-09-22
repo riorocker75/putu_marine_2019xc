@@ -5,7 +5,8 @@
 				<form action="<?php echo base_url().'index/user_daftar'; ?>" method="post">
 						<div class="body-dfv2">
 								<div class="title-dfv2">
-									<h2>Buat Akun </h2>	
+									<h2 style="margin-bottom:10px">Yuk Gabung, </h2>
+									<p class="tx-14 d-lg-block d-md-block d-sm-block d-none" style="color:rgba(0,0,0,.62)">Mungkin kamu lagi mencari ikan, udang khas daerah lain yang ingin kamu rasa atau ingin kamu jual balik ke daerah kamu, mana tau cocok </p>	
 								</div>
 							
 								<div class="input-group-dfv2">
