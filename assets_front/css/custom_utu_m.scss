@@ -367,7 +367,7 @@ border: none;
 }
 
 .product-st2-body{
-    height: 295px;
+    height: 310px;
     border-radius: 4px;
     margin-bottom: 20px;
     box-shadow: 0 1px 6px 0 rgba(49, 53, 59, 0.12);
@@ -408,14 +408,23 @@ min-width: 100%;
     font-size: 14px;
     padding:5px 10px;
     position: absolute;
-    bottom: 0;
-    right: 0;
+   bottom: 43px;
+    left: 0;
     color:$laut1-co;
 }
 .pst2-rating{
-    padding:0 10px;
+    padding:7px 10px;
+    position: absolute;
+    bottom: 0;
+    left:0;
 }
-
+.pst2-we{
+    padding:5px 10px;
+    font-size:12px;
+    color:rgba(0, 0, 0, 0.4);
+    position: absolute;
+    bottom:23px;
+}
 .pst-hidden-det{
     position: absolute;
     top:100px;
@@ -681,9 +690,56 @@ min-width: 100%;
         height: 60px;
         width: 60px;
         border-radius:50%;
-   
-
     }
 }
+.user-dutg-name{
+   position: relative;
+   top:-50px;
+   margin-bottom: -38px;
+    font-weight:800;
+    
+}
 
+.user-dutg-link{
+
+    ul{margin-left:-40px;list-style:none; display: block!important;}
+    ul li a{
+        display: block!important;
+    }
+    li{
+        padding:20px 10px;
+    }li:hover{
+        background: #f3f3f3;
+    }
+    a{
+        color:rgba(0, 0, 0, 0.5);
+        line-height: 20px;
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: 700;
+    }
+    i{width:30px}
+}
 // end togle user-sidebar
+
+// jsuggest
+.jsuggest{
+    padding:10px 5px;
+}
+// end jsuggest
+// guaranti
+.guarantie-section{
+    margin:30px 0;
+}
+.guarantie-body{
+    padding:50px 10px;
+    text-align:center;
+    transition: .6s ease;
+}
+.guarantie-img{
+    img{
+        width:70px;
+        height: 60px;
+    }
+}
+// end guarantie

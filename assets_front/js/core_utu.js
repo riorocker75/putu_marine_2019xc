@@ -78,3 +78,8 @@ $(document).ready(function(){
 });
 // end notif
 
+// slick show
+	$(document).ready(function () {
+	
+	});
+// end slick

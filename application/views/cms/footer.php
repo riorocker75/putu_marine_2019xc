@@ -5,7 +5,7 @@
 	<?php if(count($this->cart->contents()) > 0){ ?>
     <div class="togle-cart" >
          <div class="ts-cart-title">
-		 Belanjaan ( <?php echo count($this->cart->contents()); ?> )  <a class="float-right close-tc" id="close-tc"> <i class="fa fa-times tx-18 red-text text-accent-3" ></i></a>
+		 Belanjaan ( <?php echo count($this->cart->contents()); ?> )  <a class="float-right close-tc" id="close-tc"> <i class="fa fa-times tx-18 " ></i></a>
 			 
 		 </div>                
 		 <br>
@@ -68,7 +68,7 @@
 	 <div class="togle-cart" >
          <div class="ts-cart-title">
 			
-			 Opps Kosong  <a class="float-right close-tc" id="close-tc"> <i class="fa fa-times tx-18 red-text text-accent-3" ></i></a>
+			 Opps Kosong  <a class="float-right close-tc" id="close-tc"> <i class="fa fa-times tx-18 " ></i></a>
 		 </div>                
 		<div class="ts-cart-detail ">
 			<div  class="d-flex justify-content-center">
@@ -160,13 +160,15 @@
             </div>
   
             <div class="body-footer">
-              <ul>
-			  <?php foreach($category_product as $k){ ?>
-                <li>
-				<a href="<?php echo base_url().'index/kategori_produk/'.$k->pcat_id;?>"><?php echo $k->pcat_name?></a>
-				</li>
-				<?php } ?> 
-              </ul>
+				<div class="cat-footer">
+				<ul>
+				<?php foreach($category_product as $k){ ?>
+					<li>
+					<a href="<?php echo base_url().'index/kategori_produk/'.$k->pcat_id;?>"><?php echo $k->pcat_name?></a>
+					</li>
+					<?php } ?> 
+				</ul>
+			  </div>
             </div>
         </div>
         <div class="col-lg-3 col-md-6 col-sm-12 col-12">

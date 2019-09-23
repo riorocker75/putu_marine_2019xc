@@ -19,7 +19,7 @@
       <div class="col-lg-10 offset-lg-1 col-sm-10 offset-sm-1 col-10 offset-1">
           <div class="row">
               <div class="col-lg-3 col-md-3 col-sm-12 col-12">
-                <?php include"user_sidebar.php";?>
+                <?php  include"user_sidebar.php";?>
               </div>
 
               <div class="col-lg-8 col-md-8 col-sm-12 col-12">

@@ -1,4 +1,4 @@
-<div class="user-sidebar-profile">
+<div class="user-sidebar-profile d-none d-sm-none d-md-block d-lg-block">
 	<div class="user-sb-img">
 		<img src="<?php  echo base_url(); ?>images/user.png ?>">	
 

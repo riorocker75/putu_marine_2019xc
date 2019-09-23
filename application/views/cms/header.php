@@ -134,7 +134,7 @@
                <div class="nav-marine-log float-right">
                     <ul>
                       <li class="rt-shop-cart d-sm-inline-block d-inline-block d-md-none d-lg-none">
-                       <a id="tampil-search"><i class="fa fa-search white-text" aria-hidden="true"></i></a> 
+                       <a id="tampil-search"><i class="fa fa-search white-text"></i></a> 
                          
                       </li>
                       <!-- start shop -->
@@ -251,7 +251,24 @@
                     </div>
                     <div class="user-dutg-img">
                         <img src="<?php echo base_url()?>dah_image/default/pembeli.jpg" alt="" srcset="">
-                    </div>
+                      </div>
+                      <div class="user-dutg-name d-flex justify-content-center">
+
+                        <p class="tx-14 white-text"><?php echo $this->session->userdata('user_nama')?></p>
+                      </div>
+                      <div class="user-dutg-link">
+                        <ul>
+                          <li>
+                            <a href="<?php echo base_url().'user'; ?>"><i class="fa fa-user green-text text-accent-3"></i>Profil</a>
+                          </li>
+                          <li>
+                            <a href="<?php echo base_url().'user/invoice'; ?>"><i class="fa fa-credit-card blue-text text-accent-3"></i>Transaksi </a>
+                          </li>
+                          <li>
+                            <a href="<?php echo base_url().'user/user_logout'?>"><i class="fas fa-sign-out-alt red-text text-accent-3"></i>Keluar</a>
+                          </li>
+                        </ul>
+                      </div>
               </div>
           </div>   
     </div>      
