@@ -1183,7 +1183,21 @@ public function cari($rowno=0){
 
 // end cari
 
+function tentang(){
+	$this->load->database();
 
+	$this->load->view('cms/header');
+	$this->load->view('cms/tentang/v_tentang');
+	$this->load->view('cms/footer');
+}
+
+function kontak(){
+	$this->load->database();
+
+	$this->load->view('cms/header');
+	$this->load->view('cms/tentang/v_kontak');
+	$this->load->view('cms/footer');
+}
 
 
 

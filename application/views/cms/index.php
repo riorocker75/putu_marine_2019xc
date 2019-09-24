@@ -107,7 +107,7 @@
          
           <p style="line-height:6px;color:rgba(0,0,0,.5);font-size:14px;">Yuk Gabung menjadi bagian dari kami, </p>
           <p style="line-height:15px;color:rgba(0,0,0,.5);font-size:14px;">Dapatkan penghasilan tambahan dari jualan ikan atau sejenisnya secara online </p>
-           <a href="" class="btn-gabung">Daftar Disini !!</a>
+           <a href="<?php echo base_url().'petani/daftar_petani';?>" class="btn-gabung">Daftar Disini !!</a>
     
 
 

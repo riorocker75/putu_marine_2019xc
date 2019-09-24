@@ -1418,3 +1418,17 @@ a.prod-price {
   text-decoration: none;
   color: #000;
 }
+
+.body-main-page {
+  padding: 20px 10px;
+  max-width: 100%;
+}
+
+.title-main-page {
+  padding: 20px 10px;
+}
+
+.title-main-page h2 {
+  font-size: 22px;
+  font-weight: 600;
+}

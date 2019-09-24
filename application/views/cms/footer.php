@@ -133,7 +133,7 @@
           <div class="body-footer">
             <ul>
               <li>
-            	 <a href=""><i class="fas fa-envelope-open-text" style="margin-right:4px;"></i> tes--support@gmail.com</a>
+            	 <a href=""><i class="fas fa-envelope-open-text" style="margin-right:4px;"></i> niagaLaut-support@gmail.com</a>
 			  </li>
 			  
 			  <li>
@@ -626,25 +626,39 @@
             $(".input-spinner").inputSpinner()
     </script>  
 	
-	<!-- <script>
+	<script>
       function initMap() {
 	  var map;
 	  var lok={lat: 5.2030553, lng: 97.0612123};
         map = new google.maps.Map(document.getElementById('lokasi'), {
           center: lok,
           zoom: 14
-        });
+		});
+		
+		var lok1={lat: 5.2030553, lng: 97.0612123};
+        map = new google.maps.Map(document.getElementById('lokasiniaga'), {
+          center: lok1,
+          zoom: 15
+        });	
 
 		var marker = new google.maps.Marker({
           position: lok,
           map: map,
           title: 'Lokasi Kami'
+		});
+		
+		var marker1 = new google.maps.Marker({
+          position: lok1,
+          map: map,
+          title: 'Lokasi Kami'
         });
 	
-      }
-    </script>	 -->
+	  }
+	  
+	 
+    </script>	
 
- 	<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVbyFOcEs46t1t4srUIKVZIfZpSXsbiN8&callback=initMap" async defer></script> -->
+ 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVbyFOcEs46t1t4srUIKVZIfZpSXsbiN8&callback=initMap" async defer></script>
 
 	
 

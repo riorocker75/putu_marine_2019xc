@@ -75,11 +75,11 @@
                 <a href="<?php echo base_url().'petani/daftar_petani'?>">Mulai Berjualan</a>
                 </li>
                 <li>
-                <a href="">Tentang</a>
+                <a href="<?php echo base_url().'tentang-kami'?>">Tentang</a>
                 </li>
                 
                 <li>
-                <a href="">Kontak </a>
+                <a href="<?php echo base_url().'kontak-kami'?>">Kontak </a>
                 </li>
                 <li>
                 <a href="">Pembayaran</a>

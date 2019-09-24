@@ -39,29 +39,24 @@
                    
                       <div class="product-sf-checklist">
                         <label> 
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i> 
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
+                           <input type="radio">
+                           Bintang Satu (100)
                         </label>                         
                         <label> 
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i> 
-                            <i class="fa fa-star"></i>
+                        <input type="radio">
+                           Bintang Dua (200)
                         </label>  
                         <label> 
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i> 
+                          <input type="radio">
+                            Bintang Tiga (100)
                         </label>  
                         <label> 
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
+                        <input type="radio">
+                           Bintang Empat (100)
                         </label>  
                         <label> 
-                            <i class="fa fa-star"></i>
+                        <input type="radio">
+                           Bintang Lima (100)
                         </label>  
                       </div>
                      

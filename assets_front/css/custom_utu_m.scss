@@ -542,6 +542,43 @@ min-width: 100%;
 
 }
 
+.select-formg{
+    max-width: 100%;
+    position: relative;
+    margin:15px 0 25px 0;
+    i{position: absolute;left:12px;opacity:0.6;font-size: 16px;top:15px;z-index: 10221}
+    button, select {
+       background-image:none
+    }
+
+}
+
+.select-fgp{
+    z-index: 1;
+    -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+    min-width: 100%;
+    padding: 10px 25px 10px 40px;
+    border-radius: 4px;
+    border: 1px solid #f3f3f3;
+    background: #f3f3f3;
+    color:#71777a;
+    cursor: pointer;
+    font-size: 14px;
+
+}.select-formg::before{
+    font-family: FontAwesome;
+    content: "\f103";
+    font-size: 20px;
+    position: absolute;right: 7px;
+    z-index: 1021;
+    top:7px;
+    color: #34383b;
+    opacity: 0.5;
+}
+
+// end input dan select custom
 .login-v2-title{
     position: relative;
     padding: 25px 15px 15px 15px;
@@ -743,3 +780,26 @@ min-width: 100%;
     }
 }
 // end guarantie
+
+// tentang 
+.tentang-section{
+    margin:50px 0;
+}
+
+.krit-mp{
+    padding:20px 0;
+    margin:40px 0;
+    transition: .6s ease;
+
+    @media (max-width:576px){
+        margin-bottom: 10px;
+    }
+}.krit-mp:hover{
+    box-shadow: $box-shadow-8dp;
+    border-radius: 8px;
+}
+.krit-mpt{
+    padding:10px;
+}
+
+// end tentang
