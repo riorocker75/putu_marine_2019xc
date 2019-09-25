@@ -81,11 +81,9 @@
                 <li>
                 <a href="<?php echo base_url().'kontak-kami'?>">Kontak </a>
                 </li>
+               
                 <li>
-                <a href="">Pembayaran</a>
-                </li>
-                <li>
-                <a href="">Cek Resi</a>
+                <a href="" data-toggle="modal" data-target="#modal-resi">Cek Resi</a>
                 </li>
               </ul>
 
@@ -103,7 +101,7 @@
             <div class="col-lg-2 col-md-2 d-sm-none d-none d-lg-block d-md-block">
               <div class="cari-marine-img">
                 <a href="<?php echo base_url()?>">
-                  <img src="<?php echo base_url()?>dah_image/system/logoutu1.png">
+                  <img src="<?php echo base_url()?>dah_image/logo/teslogo4.png">
                   </a>
               </div>
             </div>
@@ -125,9 +123,11 @@
 
               <div class="col-sm-6 d-sm-inline-block d-none d-md-none d-lg-none">
                  <div class="d-flex justify-content-center">   
-                            <a href="<?php echo base_url()?>" class="tx-18">
-                                Logo disni
-                              </a>
+                 <div class="cari-marine-img">
+                <a href="<?php echo base_url()?>">
+                  <img src="<?php echo base_url()?>dah_image/logo/teslogo4.png">
+                  </a>
+              </div>
                   </div>
               </div>
             <div class="col-xl-4 col-lg-5 col-md-4 col-sm-4 col-9">

@@ -155,8 +155,11 @@
 </section>
 
 	<?php }else{?>
-	    <div class="container">
-            Maaf Produk yang kamu cari belum tersedia
+	    <div class="container-contents">
+            <div class="d-flex justify-content-center">
+
+                <img src="<?php echo base_url()?>dah_image/default/kosong-produk.png" style="max-width:100%;text-align:center">
+            </div>
         </div>
 	<?php }?>
 

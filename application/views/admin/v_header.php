@@ -5,8 +5,8 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>SHOP MALASNGODING.COM</title>
-<link rel="icon" type="image/png" href="<?php echo base_url().'dah_image/system/logo.png' ?>">
+	<title>niagaLaut</title>
+<link rel="icon" type="image/png" href="<?php echo base_url().'dah_image/system/logoutu1.png' ?>">
 	<!-- Global stylesheets -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
 	<link href="<?php echo base_url(); ?>assets/css/dahcode.css" rel="stylesheet" type="text/css">
@@ -50,7 +50,7 @@
 	<!-- Main navbar -->
 	<div class="navbar navbar-inverse">
 		<div class="navbar-header">
-			<a class="navbar-brand" href="<?php echo base_url(); ?>"><img src="<?php echo base_url() ?>dah_image/system/logo2.png"></a>
+			<a class="navbar-brand" href="<?php echo base_url(); ?>"><img src="<?php echo base_url() ?>dah_image/logo/teslogo4.png"></a>
 
 			<ul class="nav navbar-nav visible-xs-block">
 				<li><a data-toggle="collapse" data-target="#navbar-mobile"><i class="icon-tree5"></i></a></li>

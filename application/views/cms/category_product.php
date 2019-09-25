@@ -1,6 +1,6 @@
 <!-- breadrumb section -->
 <section class="breadcrumbs">
-    <div class="container">
+    <div class="container-contents">
         <div class="breadcrumbs-line">
             <ul>
 				<li><a href="<?php echo base_url()?>">Home</a> </li>
@@ -21,7 +21,7 @@
 	
 	?>
 <section class="product-gird">
-    <div class="container">
+    <div class="container-contents">
         <div class="row" >
             <!-- sidebar product-gird -->
             <?php include "sidebar_shop.php"?>
@@ -160,13 +160,14 @@
             <!-- end sidebar -->
                 <div class="col-lg-9 col-md-7 col-sm-12 col-12">
                     <div class="not-avail d-flex justify-content-center">
-                        <img src="<?php echo base_url()?>dah_image/system/unhappy.png">
-                       
+                   <img src="<?php echo base_url()?>dah_image/default/kosong-pure.png" alt="" srcset="">
+                         
                     </div>
                     <div style="text-align:center;margin-top:20px">
-                    <p class="tx-20 red-text">Oopps !!</p>
 
-                    <p class="tx-20 red-text">Product di Kategori <b><?php echo $kategori_produk; ?></b> Belum Tersedia</p>
+                    <p class="tx-20">Oopps !!</p>
+
+                    <p class="tx-20">Product di Kategori <b><?php echo $kategori_produk; ?></b> Belum Tersedia</p>
                     </div>
                
                 </div>

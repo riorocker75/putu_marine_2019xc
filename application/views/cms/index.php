@@ -171,26 +171,32 @@
 
 
 <!-- ==================================================================================================== -->
-<div class="chat-sess-body" id="chat-body">
-    <div class="grt-close">
-      <a style="cursor:pointer"> <i class="fa fa-times red-text"></i> </a>
-    </div>
-  
-    <div class="grt-cs">
+<div class="chat-v2-body" id="chat-body">
     
-      <img src="<?php echo base_url()?>dah_image/system/supp.png" alt="">
-      <div class="grt-cs-isi">
-       <label id="pesan-hari"></label>,<br> Ada yang bisa kami bantu ?
-      
+  <div class="chat-v2-title">
+    <img src="<?php echo base_url()?>dah_image/default/supp1.png" style="width:34px; height:34px;border-radius:50%;">
+    <span class="tx-12">Dika@support</span>
+    <span class="float-right" style="margin-right:5px;cursor:pointer" id="supp-close"><i class="fa fa-times" aria-hidden="true"></i> </span>    
+  </div>
+   
+      <div class="chat-v2-isi">
+          <div class="text-isi-chat">
+          <b><label id="pesan-hari"></label></b>, 
+          <p>ada yang bisa kami bantu?</p>
+          </div>  
       </div>
-    </div>
 
-    <div class="grt-wa" style="text-align:center;margin-top:15px">
-      <a href="" class="tx-13 white-text green darken-3" style="border-radius:8px; padding:8px 20px;"> <i class="fab fa-whatsapp tx-18"></i> Chat Kami Di Whatsapp</a>
-    </div>
+    <div class="chat-v2-footer">
+      <div class="chat-column-form">
+
+        <input class="chat-ktext" type="text" placeholder="Ketikan disini">
+        <i class="fa fa-paper-plane" aria-hidden="true"></i>
+      </div>
+    </div>    
 </div>
-<div class="chat-sess-flat green darken-2 white-text " id="chat-sess">
- <i class="fas fa-comment-dots tx-30"></i>
+<!-- end chat-v2-body -->
+<div class="chat-sess pink darken-2 white-text " id="chat-sess">
+ <i class="fas fa-comment-dots tx-25"></i>
 </div>
 
 <!-- <script>

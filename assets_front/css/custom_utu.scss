@@ -870,12 +870,12 @@ font-size: 16px;
 .chat-sess {
   position: fixed;
   bottom: 40px;
-  width: 60px;
-  height: 60px;
-  box-shadow: $box-shadow-card;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  padding: 15px;
+  padding: 13px;
   background: #fff;
+  box-shadow: $box-shadow-4dp;
   right: 10px;
   z-index: 1020;
   cursor: pointer;
@@ -883,6 +883,15 @@ font-size: 16px;
   i {
     position: relative;
   }
+
+  @media(max-width:576px){
+    bottom: 15px;
+  }
+}
+.chat-sess:hover{
+  transition: .7s ease;
+
+  box-shadow: $box-shadow-12dp;
 }
 
 .chat-sess-flat{
@@ -980,6 +989,67 @@ font-size: 16px;
 
 }
 
+.chat-v2-body{
+  display: none;
+  position: fixed;
+  bottom: 95px;
+  right:20px;
+  height: 360px;
+  width: 250px;
+  background:#f3f3f3;
+  z-index: 1051;
+  box-shadow: $box-shadow-8dp;
+  border-radius: 4px;
+  @media(max-width:576px){
+    bottom: 75px;
+  }
+}
+.chat-v2-title{
+  padding:12px 10px;
+  background: $laut1-co;
+  color: #fff;
+  border-radius: 4px 4px 0 0;
+
+}
+
+.chat-v2-isi{
+  padding:20px 10px; 
+}
+.text-isi-chat{
+  padding:3px 12px;
+  background: #e6e8eb;
+  width: 100%;
+  font-size:13px; 
+  p{margin-top: -8px;margin-bottom:2px;}
+}
+.chat-v2-footer{
+  position: absolute;
+  bottom: 0;
+  background: #fff;
+  padding:5px 5px;
+  width: 250px;
+  box-shadow: 20px 0 5px 0 rgba(108, 111, 115, 0.1);
+  border-radius: 0 0 4px 4px;
+}
+.chat-column-form{
+  position: relative;
+  i{position: absolute;right: 8px;top:12px;color:rgba(0,0,0,.6)}
+  i:hover{color:$laut1-co;}
+
+}
+.chat-ktext{
+  padding:5px 25px 5px 10px;
+  border-radius: 4px;
+  max-width: 100%;
+  border:1px solid transparent;
+}.chat-ktext::placeholder{
+  font-size: 14px;
+  color:rgba(0, 0, 0, 0.8);
+}
+.chat-ktext::-ms-input-placeholder{
+  font-size: 14px;
+  color:rgba(0, 0, 0, 0.5);
+}
 // end chat
 
 .button-3d {

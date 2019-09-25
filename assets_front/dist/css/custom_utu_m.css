@@ -178,7 +178,7 @@
 
 .cari-marine-img img {
   height: 42px;
-  width: 42px;
+  max-width: 100%;
 }
 
 .cari-marine {

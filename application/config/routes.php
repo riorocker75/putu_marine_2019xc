@@ -62,6 +62,8 @@ $route['daftar-petani']="petani/daftar_petani";
 
 $route['tentang-kami']="index/tentang";
 $route['kontak-kami']="index/kontak";
+$route['cek-resi']="index/tracking";
+
 
 
 

@@ -120,6 +120,44 @@
 	</div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
+<!-- modal resi -->
+
+<div class="modal fade" id="modal-resi" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content">
+			<div class="login-v2-title">
+				<h2>Cek Resi Pengiriman</h2>
+				<i class="fa fa-times tx-20 close" data-dismiss="modal" aria-label="Close"></i>
+			</div>
+			<form method="get" action="http://www.cekresi.com" target="_BLANK" class="main-search">
+				<div class="login-v2-body">  
+						
+						<div class="input-group-dfv2">
+							
+							<input class="input-dfv2" type="text" name="noresi" placeholder="Masukkan no.resi" style="padding-right:90px!important">
+							<i class="fa fa-key" aria-hidden="true"></i>
+
+						<button style="position:absolute;right:0;top:2px;padding:10px 30px;font-size:14px;color:#fff;background:#0095DA;border:none;border-radius:3px;cursor:pointer">cari</button>
+						</div>
+					
+				</div>
+					
+				</form>
+			
+		</div>
+	</div>
+</div>
+
+<script>
+	$('#exampleModal').on('show.bs.modal', event => {
+		var button = $(event.relatedTarget);
+		var modal = $(this);
+		// Use above variables to manipulate the DOM
+		
+	});
+</script>
+<!-- end resi modal -->
+
 <!-- footer start -->
 <footer class="footer-class blue darken-3 white-text">
   <div class="container">
@@ -394,11 +432,11 @@
 	// chat
 	
 	$(document).ready(function () {
-		$('.grt-close').click(function () { 
+		$('#supp-close').click(function () { 
 				$('#chat-body').slideUp();
 			});
 			$('#chat-sess').click(function () { 
-				$('.chat-sess-body').fadeIn();	
+				$('.chat-v2-body').fadeIn();	
 			});
 	});
 
